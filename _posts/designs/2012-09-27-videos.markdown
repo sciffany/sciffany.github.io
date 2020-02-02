@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Teachers' day video"
+# date: 2012-09-27
+categories: [animprod]
+# image: teachers_day.png
+video: dNL3ZdTbOnE
+description: For Teachers' Day in third year high school, I made this.&nbsp;A parody of the Hunger Games trailer with all my teachers in it. It was entirely made with Microsoft Powerpoint. Enjoy.
+---

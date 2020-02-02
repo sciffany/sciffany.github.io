@@ -1,0 +1,100 @@
+this.tilePressHandler = function ()
+{
+	if (!_root.GamePaused)
+	{
+		if (!this.Selected)
+		{
+			if (SelectedTile)
+			{
+				// if previous selection exists
+				if (this.isFree ())
+				{
+					play_selected_sound ("select");
+					if (checkTileMatch (SelectedTile, this))
+					{
+						removePair (SelectedTile, this);
+						SelectedTile = undefined;
+					}
+					else
+					{
+						play_selected_sound ("tile_not_match");
+						SelectedTile.deselect ();
+						this.select ();
+					}
+				}
+			}
+			else
+			{
+				// Select the tile if free, no previous selection to match
+				if (this.isFree ())
+				{
+					play_selected_sound ("select");
+					this.select ();
+				}
+			}
+		}
+		else
+		{
+			play_selected_sound ("deselect");
+			this.deselect ();
+		}
+	}
+};
+function tileSelect ()
+{
+	this.Selected = true;
+	this.attachMovie ("SelectGlow", "MySelectGlow", 777);
+	SelectedTile = this;
+}
+function tileDeselect ()
+{
+	this.Selected = false;
+	this["MySelectGlow"].removeMovieClip ();
+	SelectedTile = undefined;
+}
+function tileIsFree ()
+{
+	var topIsFree = false;
+	var aSideIsFree = false;
+	// Is top free?
+	if (this.Layer == LAYERS - 1)
+	{
+		topIsFree = true;
+	}
+	else
+	{
+		if (!isTilePresent (this.Layer + 1, this.Row + 1, this.Column + 1) && !isTilePresent (this.Layer + 1, this.Row + 1, this.Column) && !isTilePresent (this.Layer + 1, this.Row + 1, this.Column - 1) && !isTilePresent (this.Layer + 1, this.Row, this.Column + 1) && !isTilePresent (this.Layer + 1, this.Row, this.Column) && !isTilePresent (this.Layer + 1, this.Row, this.Column - 1) && !isTilePresent (this.Layer + 1, this.Row - 1, this.Column + 1) && !isTilePresent (this.Layer + 1, this.Row - 1, this.Column) && !isTilePresent (this.Layer + 1, this.Row - 1, this.Column - 1))
+		{
+			topIsFree = true;
+		}
+	}
+	// Check left side
+	if (this.Column <= 1)
+	{
+		// if a tile is in column 2, it can't be in 1
+		aSideIsFree = true;
+	}
+	else
+	{
+		if (!isTilePresent (this.Layer, this.Row - 1, this.Column - 2) && !isTilePresent (this.Layer, this.Row, this.Column - 2) && !isTilePresent (this.Layer, this.Row + 1, this.Column - 2))
+		{
+			aSideIsFree = true;
+		}
+	}
+	if (!aSideIsFree)
+	{
+		//Left ain't free, check right
+		if (this.Column >= COLUMNS - 2)
+		{
+			aSideIsFree = true;
+		}
+		else
+		{
+			if (!isTilePresent (this.Layer, this.Row - 1, this.Column + 2) && !isTilePresent (this.Layer, this.Row, this.Column + 2) && !isTilePresent (this.Layer, this.Row + 1, this.Column + 2))
+			{
+				aSideIsFree = true;
+			}
+		}
+	}
+	return topIsFree && aSideIsFree;
+}

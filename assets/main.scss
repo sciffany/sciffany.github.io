@@ -4,4 +4,60 @@
 
 @import "minima";
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Roboto:700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
+.archive-item {
+  margin-top: 20px;
+}
+
+.card-contents {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-col-1 {
+  width: 45%;
+}
+
+.card-col-2 {
+  width: 55%;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.post-title-green {
+  color: darken($brand-color, 15%);
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.sub-heading {
+  // color: darken($brand-color, 15%);
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.anchor {
+  padding-top: 100px;
+}
+
+.holder {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.horizontal-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-style {
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,232 @@
+this.TILE_WIDTH = 45
+this.TILE_HEIGHT = 55
+
+this.COLUMN_OFFSET = this.TILE_WIDTH / 2
+this.ROW_OFFSET = this.TILE_HEIGHT / 2
+this.LAYER_OFFSET = -4
+
+this.BOARD_X_OFFSET = 60
+this.BOARD_Y_OFFSET = 50
+
+this.LAYER_X_OFFSET = -4
+this.LAYER_Y_OFFSET = -4
+
+this.LAYERS = 5
+this.ROWS = 16
+this.COLUMNS = 30
+
+/*
+	This defines all of the suits in the game.
+	The suit must be a movie, each frame being a
+	different face value.
+	Name     - the ActionScript linkage name of the suit.
+	Total    - number of frames in linkage movie clip,
+			   or values in the suit.
+	Each     - How many copies of each value to have.
+	Distinct - If any value can be matched to any other
+			   value. This helps with the Wind and Dragon
+			   suits because there's only one copy of each
+			   in MahJongg Solitaire.
+			   
+	Technically, the name suits are a misnomer for programmer convenience.
+	Dragon and Wind are honor tiles, not suits like Ball, Bamboo and
+	Character. Not sure about flower and Season - they're bonus, I think.
+	
+	Any Season can match any other season as there is only one copy of
+	each tile. Ditto for Flowers.
+*/
+this.Suits = new Array(
+  { SuitName: "BallSuit", TotalFaces: 9, NumberOfEachFace: 4, Distinct: true }, //36 total tiles
+  {
+    SuitName: "BambooSuit",
+    TotalFaces: 9,
+    NumberOfEachFace: 4,
+    Distinct: true
+  }, //36 total tiles
+  {
+    SuitName: "CharacterSuit",
+    TotalFaces: 9,
+    NumberOfEachFace: 4,
+    Distinct: true
+  }, //36 total tiles
+  {
+    SuitName: "SeasonSuit",
+    TotalFaces: 4,
+    NumberOfEachFace: 1,
+    Distinct: false
+  }, // 4 total tiles
+  { SuitName: "WindSuit", TotalFaces: 4, NumberOfEachFace: 4, Distinct: true }, //16 total tiles
+  {
+    SuitName: "FlowerSuit",
+    TotalFaces: 4,
+    NumberOfEachFace: 1,
+    Distinct: false
+  }, // 4 total tiles
+  { SuitName: "DragonSuit", TotalFaces: 3, NumberOfEachFace: 4, Distinct: true } //12 total tiles
+) // 144 tiles all together.
+
+this.ListOfTiles = new Array()
+this.TilePositionArray = undefined
+this.SelectedValue = 10
+
+selectionWindow._visible = false
+customLayoutWindow._visible = false
+
+createListOfTiles()
+
+function createListOfTiles() {
+  for (var suit = 0; suit < Suits.length; suit++) {
+    var suitName = Suits[suit].SuitName
+    var totalFaces = Suits[suit].TotalFaces
+    var copies = Suits[suit].NumberOfEachFace
+
+    //Face values will be the same as Frame numbers, so count from 1
+    for (var faceValue = 1; faceValue <= totalFaces; faceValue++) {
+      for (var copy = 0; copy < copies; copy++) {
+        ListOfTiles.push({
+          SuitName: suitName,
+          FaceValue: faceValue,
+          IsRemoved: false
+        })
+      }
+    }
+  }
+}
+
+function getShuffledCopyOfList(theOriginalList) {
+  // Make a copy of the Array
+  var theList = theOriginalList.slice()
+
+  for (var i = 0; i < theList.length; i++) {
+    // swap current element, identified with arrayIndex,
+    // with any other element in the array.
+    var otherIndex = randomInteger(0, theList.length - 1)
+    var temp = theList[i]
+    theList[i] = theList[otherIndex]
+    theList[otherIndex] = temp
+  }
+  return theList
+}
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function initTilePositionArray() {
+  TilePositionArray = new Array(LAYERS)
+  for (var layer = 0; layer < LAYERS; layer++) {
+    var tempRowArray = new Array(ROWS)
+    for (var row = 0; row < ROWS; row++) {
+      var tempColumnArray = new Array(COLUMNS)
+      tempRowArray[row] = tempColumnArray
+    }
+    TilePositionArray[layer] = tempRowArray
+  }
+}
+
+function setUpBoard() {
+  var tempDepth = 1000
+
+  _root.GamePauseTotalTime = 0
+  _root.GamePaused = false
+
+  //	var theSayings:Array = new Array();
+  //	for(var i = 0; i < theSayingsScreen.Saying._totalframes; i++)
+  //	{
+  //		theSayings.push(i);
+  //	}
+  //	_root.ShuffledSayings = getShuffledCopyOfList(theSayings);
+
+  for (var layer = 0; layer < LAYERS; layer++) {
+    var rowBookmark = 0
+    var row = 0
+    var columnBookmark = 0
+    var column = 0
+    var atMaxRow = false
+    var atMaxColumn = false
+    while (!atMaxRow && !atMaxColumn) {
+      tempDepth++
+      if (TilePositionArray[layer][row][column]) {
+        var tempName = "Tile-L" + layer + "-R" + row + "-C" + column
+        this.attachMovie("Tile", tempName, tempDepth)
+
+        //Set some values
+        this[tempName]._x = COLUMN_OFFSET * column + LAYER_OFFSET * layer
+        this[tempName]._y = ROW_OFFSET * row + LAYER_OFFSET * layer
+        this[tempName].Layer = layer
+        this[tempName].Row = row
+        this[tempName].Column = column
+        this[tempName].SuitName = TilePositionArray[layer][row][column].SuitName
+        this[tempName].FaceValue =
+          TilePositionArray[layer][row][column].FaceValue
+
+        //Put the right face on...
+        this[tempName].attachMovie(this[tempName].SuitName, "Face", 100)
+        this[tempName].Face.gotoAndStop(this[tempName].FaceValue)
+
+        //Attach event handlers and methods
+        this[tempName].onPress = tilePressHandler
+        this[tempName].select = tileSelect
+        this[tempName].deselect = tileDeselect
+        this[tempName].isFree = tileIsFree
+        this[tempName].TilePositionArray = TilePositionArray
+
+        TilePositionArray[layer][row][column].TileMovieClipName = tempName
+      } // end if tile exists at position
+
+      // Change the values
+      row--
+      column++
+      if (row < 0 || column >= COLUMNS) {
+        if (!atMaxRow) {
+          if (row == ROWS - 1) {
+            atMaxRow = true
+          } else {
+            rowBookmark++
+          }
+        } else {
+          if (column == COLUMNS - 1) {
+            atMaxColumn = true
+          } else {
+            columnBookmark++
+          }
+        }
+
+        row = rowBookmark
+        column = columnBookmark
+      }
+    }
+  }
+
+  updateGameStats()
+}
+
+//play which sound
+play_selected_sound = function(play_sound) {
+  if (soundon) {
+    var _sound = new Sound()
+    _sound.attachSound(play_sound)
+    _sound.start(0, 1)
+  }
+}
+showSoundStatus = function() {
+  if (_root.soundon) {
+    _root.soundstatus.text = "sound on"
+  } else {
+    _root.soundstatus.text = "sound off"
+  }
+}
+_root.onEnterFrame = function() {
+  if (!_root.GamePaused) {
+    var timeInMSec = getTimer() - _root.GameStartTime - _root.GamePauseTotalTime
+    var timeInSec = Math.round(timeInMSec / 1000)
+    var minutes = Math.floor(timeInSec / 60)
+    var leftovers = String(timeInSec % 60)
+    if (leftovers.length == 1) {
+      leftovers = "0" + leftovers
+    }
+    time_txt.text = minutes + ":" + leftovers
+  }
+}
+this.showSoundStatus()
+this.play_selected_sound("intro")
+stop()

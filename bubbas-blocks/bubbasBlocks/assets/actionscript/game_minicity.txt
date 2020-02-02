@@ -1,0 +1,185 @@
+theWinScreen.onPress = function()
+{
+	theWinScreen._visible = false;
+	_root.gotoAndStop("Start");
+}
+theLoseScreen.onPress = function()
+{
+	theLoseScreen._visible = false;
+	_root.gotoAndStop("Game Over");
+}
+
+theSayingsScreen.TheButton.onPress = function()
+{
+	_root.GamePaused = false;
+	_root.GamePauseTotalTime += getTimer() - _root.GamePauseStartTime;
+	theSayingsScreen._visible = false;
+}
+
+theWinScreen._visible = false;
+theLoseScreen._visible = false;
+theSayingsScreen._visible = false;
+theExitScreen._visible = false;
+
+var tileList = _root.getShuffledCopyOfList(_root.ListOfTiles);
+
+		//Arena
+		
+		//Layer 0
+		_root.TilePositionArray[0][12][2] =  tileList.pop();
+		_root.TilePositionArray[0][4][0] =  tileList.pop();
+		_root.TilePositionArray[0][4][2] =  tileList.pop();
+		_root.TilePositionArray[0][2][4] =  tileList.pop();
+		_root.TilePositionArray[0][10][0] =  tileList.pop();
+		_root.TilePositionArray[0][8][0] =  tileList.pop();
+		_root.TilePositionArray[0][6][0] =  tileList.pop();
+		_root.TilePositionArray[0][10][2] =  tileList.pop();
+		_root.TilePositionArray[0][0][16] =  tileList.pop();
+		_root.TilePositionArray[0][0][14] =  tileList.pop();
+		_root.TilePositionArray[0][0][12] =  tileList.pop();
+		_root.TilePositionArray[0][0][10] =  tileList.pop();
+		_root.TilePositionArray[0][0][8] =  tileList.pop();
+		_root.TilePositionArray[0][0][6] =  tileList.pop();
+		_root.TilePositionArray[0][0][4] =  tileList.pop();
+		_root.TilePositionArray[0][2][2] =  tileList.pop();
+		_root.TilePositionArray[0][12][4] =  tileList.pop();
+		_root.TilePositionArray[0][2][26] =  tileList.pop();
+		_root.TilePositionArray[0][2][24] =  tileList.pop();
+		_root.TilePositionArray[0][0][24] =  tileList.pop();
+		_root.TilePositionArray[0][0][22] =  tileList.pop();
+		_root.TilePositionArray[0][0][20] =  tileList.pop();
+		_root.TilePositionArray[0][0][18] =  tileList.pop();
+		_root.TilePositionArray[0][14][12] =  tileList.pop();
+		_root.TilePositionArray[0][14][10] =  tileList.pop();
+		_root.TilePositionArray[0][14][8] =  tileList.pop();
+		_root.TilePositionArray[0][14][6] =  tileList.pop();
+		_root.TilePositionArray[0][14][4] =  tileList.pop();
+		_root.TilePositionArray[0][14][22] =  tileList.pop();
+		_root.TilePositionArray[0][14][20] =  tileList.pop();
+		_root.TilePositionArray[0][14][18] =  tileList.pop();
+		_root.TilePositionArray[0][14][16] =  tileList.pop();
+		_root.TilePositionArray[0][14][14] =  tileList.pop();
+		_root.TilePositionArray[0][10][28] =  tileList.pop();
+		_root.TilePositionArray[0][8][28] =  tileList.pop();
+		_root.TilePositionArray[0][6][28] =  tileList.pop();
+		_root.TilePositionArray[0][4][28] =  tileList.pop();
+		_root.TilePositionArray[0][4][26] =  tileList.pop();
+		_root.TilePositionArray[0][12][24] =  tileList.pop();
+		_root.TilePositionArray[0][12][26] =  tileList.pop();
+		_root.TilePositionArray[0][10][26] =  tileList.pop();
+		_root.TilePositionArray[0][14][24] =  tileList.pop();
+		_root.TilePositionArray[0][12][22] =  tileList.pop();
+		_root.TilePositionArray[0][12][20] =  tileList.pop();
+		_root.TilePositionArray[0][12][18] =  tileList.pop();
+		_root.TilePositionArray[0][12][16] =  tileList.pop();
+		_root.TilePositionArray[0][12][14] =  tileList.pop();
+		_root.TilePositionArray[0][12][12] =  tileList.pop();
+		_root.TilePositionArray[0][12][10] =  tileList.pop();
+		_root.TilePositionArray[0][12][8] =  tileList.pop();
+		_root.TilePositionArray[0][12][6] =  tileList.pop();
+		_root.TilePositionArray[0][2][22] =  tileList.pop();
+		_root.TilePositionArray[0][2][20] =  tileList.pop();
+		_root.TilePositionArray[0][2][18] =  tileList.pop();
+		_root.TilePositionArray[0][2][16] =  tileList.pop();
+		_root.TilePositionArray[0][2][14] =  tileList.pop();
+		_root.TilePositionArray[0][2][12] =  tileList.pop();
+		_root.TilePositionArray[0][2][10] =  tileList.pop();
+		_root.TilePositionArray[0][2][8] =  tileList.pop();
+		_root.TilePositionArray[0][2][6] =  tileList.pop();
+		_root.TilePositionArray[0][4][24] =  tileList.pop();
+		_root.TilePositionArray[0][10][24] =  tileList.pop();
+		_root.TilePositionArray[0][10][4] =  tileList.pop();
+		_root.TilePositionArray[0][4][4] =  tileList.pop();
+		_root.TilePositionArray[0][8][26] =  tileList.pop();
+		_root.TilePositionArray[0][6][26] =  tileList.pop();
+		_root.TilePositionArray[0][8][2] =  tileList.pop();
+		_root.TilePositionArray[0][6][2] =  tileList.pop();
+		_root.TilePositionArray[0][8][24] =  tileList.pop();
+		_root.TilePositionArray[0][6][24] =  tileList.pop();
+		_root.TilePositionArray[0][8][4] =  tileList.pop();
+		_root.TilePositionArray[0][6][4] =  tileList.pop();
+		_root.TilePositionArray[0][7][22] =  tileList.pop();
+		_root.TilePositionArray[0][7][6] =  tileList.pop();
+		
+		//Layer 1
+		_root.TilePositionArray[1][2][4] =  tileList.pop();
+		_root.TilePositionArray[1][2][2] =  tileList.pop();
+		_root.TilePositionArray[1][4][2] =  tileList.pop();
+		_root.TilePositionArray[1][4][0] =  tileList.pop();
+		_root.TilePositionArray[1][6][0] =  tileList.pop();
+		_root.TilePositionArray[1][8][0] =  tileList.pop();
+		_root.TilePositionArray[1][10][0] =  tileList.pop();
+		_root.TilePositionArray[1][10][2] =  tileList.pop();
+		_root.TilePositionArray[1][12][2] =  tileList.pop();
+		_root.TilePositionArray[1][12][4] =  tileList.pop();
+		_root.TilePositionArray[1][4][28] =  tileList.pop();
+		_root.TilePositionArray[1][6][28] =  tileList.pop();
+		_root.TilePositionArray[1][8][28] =  tileList.pop();
+		_root.TilePositionArray[1][10][28] =  tileList.pop();
+		_root.TilePositionArray[1][2][24] =  tileList.pop();
+		_root.TilePositionArray[1][2][26] =  tileList.pop();
+		_root.TilePositionArray[1][4][26] =  tileList.pop();
+		_root.TilePositionArray[1][12][24] =  tileList.pop();
+		_root.TilePositionArray[1][12][26] =  tileList.pop();
+		_root.TilePositionArray[1][10][26] =  tileList.pop();
+		_root.TilePositionArray[1][0][14] =  tileList.pop();
+		_root.TilePositionArray[1][0][12] =  tileList.pop();
+		_root.TilePositionArray[1][0][10] =  tileList.pop();
+		_root.TilePositionArray[1][0][8] =  tileList.pop();
+		_root.TilePositionArray[1][0][6] =  tileList.pop();
+		_root.TilePositionArray[1][0][4] =  tileList.pop();
+		_root.TilePositionArray[1][0][22] =  tileList.pop();
+		_root.TilePositionArray[1][0][20] =  tileList.pop();
+		_root.TilePositionArray[1][0][18] =  tileList.pop();
+		_root.TilePositionArray[1][0][16] =  tileList.pop();
+		_root.TilePositionArray[1][0][24] =  tileList.pop();
+		_root.TilePositionArray[1][14][18] =  tileList.pop();
+		_root.TilePositionArray[1][14][16] =  tileList.pop();
+		_root.TilePositionArray[1][14][14] =  tileList.pop();
+		_root.TilePositionArray[1][14][12] =  tileList.pop();
+		_root.TilePositionArray[1][14][10] =  tileList.pop();
+		_root.TilePositionArray[1][14][8] =  tileList.pop();
+		_root.TilePositionArray[1][14][6] =  tileList.pop();
+		_root.TilePositionArray[1][14][4] =  tileList.pop();
+		_root.TilePositionArray[1][14][24] =  tileList.pop();
+		_root.TilePositionArray[1][14][22] =  tileList.pop();
+		_root.TilePositionArray[1][14][20] =  tileList.pop();
+		_root.TilePositionArray[1][7][26] =  tileList.pop();
+		_root.TilePositionArray[1][7][2] =  tileList.pop();
+		
+		//Layer 2
+		_root.TilePositionArray[2][14][21] =  tileList.pop();
+		_root.TilePositionArray[2][14][23] =  tileList.pop();
+		_root.TilePositionArray[2][14][7] =  tileList.pop();
+		_root.TilePositionArray[2][14][5] =  tileList.pop();
+		_root.TilePositionArray[2][14][17] =  tileList.pop();
+		_root.TilePositionArray[2][14][19] =  tileList.pop();
+		_root.TilePositionArray[2][14][11] =  tileList.pop();
+		_root.TilePositionArray[2][14][9] =  tileList.pop();
+		_root.TilePositionArray[2][14][15] =  tileList.pop();
+		_root.TilePositionArray[2][14][13] =  tileList.pop();
+		_root.TilePositionArray[2][0][23] =  tileList.pop();
+		_root.TilePositionArray[2][0][21] =  tileList.pop();
+		_root.TilePositionArray[2][0][19] =  tileList.pop();
+		_root.TilePositionArray[2][0][17] =  tileList.pop();
+		_root.TilePositionArray[2][0][15] =  tileList.pop();
+		_root.TilePositionArray[2][0][13] =  tileList.pop();
+		_root.TilePositionArray[2][0][11] =  tileList.pop();
+		_root.TilePositionArray[2][0][9] =  tileList.pop();
+		_root.TilePositionArray[2][0][7] =  tileList.pop();
+		_root.TilePositionArray[2][0][5] =  tileList.pop();
+		_root.TilePositionArray[2][9][28] =  tileList.pop();
+		_root.TilePositionArray[2][7][28] =  tileList.pop();
+		_root.TilePositionArray[2][5][28] =  tileList.pop();
+		_root.TilePositionArray[2][9][0] =  tileList.pop();
+		_root.TilePositionArray[2][7][0] =  tileList.pop();
+		_root.TilePositionArray[2][5][0] =  tileList.pop();
+
+
+this.SelectedTile = undefined;
+this.FreePairs = new Array();
+
+theBoard.setUpBoard = setUpBoard;
+theBoard.setUpBoard();
+
+stop();

@@ -1,0 +1,144 @@
+function updateGameStats ()
+{
+	var freeTiles = new Array ();
+	var tilesLeft = 0;
+	for (var layer = 0; layer < LAYERS; layer++)
+	{
+		for (var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				if (isTilePresent (layer, row, column))
+				{
+					tilesLeft++;
+					if (theBoard[TilePositionArray[layer][row][column].TileMovieClipName].isFree ())
+					{
+						freeTiles.push (theBoard[TilePositionArray[layer][row][column].TileMovieClipName]);
+					}
+				}
+			}
+		}
+	}
+	var freeTileCount = freeTiles.length;
+	FreePairs = new Array ();
+	while (freeTiles.length > 0)
+	{
+		var currentTile = freeTiles.pop ();
+		for (var myIndex = 0; myIndex < freeTiles.length; myIndex++)
+		{
+			if (checkTileMatch (currentTile, freeTiles[myIndex]))
+			{
+				FreePairs.push ({Tile1:currentTile, Tile2:freeTiles[myIndex]});
+				// Delete single element (now in FreePairs)
+				freeTiles.splice (myIndex, 1);
+				//Break out of the loop...
+				break;
+			}
+		}
+	}
+	if (!_root.score)
+	{
+		//Test for non-existance
+		_root.score = 0;
+		// define it
+	}
+	if (!_root.GameStartTime)
+	{
+		_root.GameStartTime = getTimer ();
+	}
+	// Show in GUI...       
+	free_pairs_txt.text = FreePairs.length;
+	tiles_left_txt.text = tilesLeft;
+	free_tiles_txt.text = freeTileCount;
+	score_txt.text = _root.score;
+	if (FreePairs.length == 0)
+	{ 
+		if (tilesLeft == 0)
+		{
+			// Win
+			play_selected_sound ("win");
+			theWinScreen._visible = true;
+		}
+		else
+		{
+			play_selected_sound ("lose");
+			theLoseScreen._visible = true;
+		}
+	}
+}
+function checkTileMatch (tile1, tile2)
+{
+	var tilesMatch = false;
+	if (tile1.SuitName == tile2.SuitName)
+	{
+		if ((tile1.FaceValue == tile2.FaceValue) || (tile2.SuitName == "SeasonSuit" || tile2.SuitName == "FlowerSuit"))
+		{
+			// If the face values equal, or the suit is season or flower, MATCH!
+			tilesMatch = true;
+		}
+	}
+	return tilesMatch;
+}
+function removePair (tile1, tile2)
+{
+	TilePositionArray[tile1.Layer][tile1.Row][tile1.Column].IsRemoved = true;
+	TilePositionArray[tile2.Layer][tile2.Row][tile2.Column].IsRemoved = true;
+	//
+	_root.score += _root.SelectedValue;
+	updateGameStats ();
+	if (tile1.SuitName == "DragonSuit" || tile1.SuitName == "FlowerSuit" || tile1.SuitName == "WindSuit" || tile1.SuitName == "SeasonSuit")
+	{
+		play_selected_sound ("special_match");
+//		_root.GamePaused = true;
+//		_root.GamePauseStartTime = getTimer ();
+//		theSayingsScreen.Tile1.attachMovie (tile1.SuitName, "FacePaint", 1);
+//		theSayingsScreen.Tile1.FacePaint.gotoAndStop (tile1.FaceValue);
+//		theSayingsScreen.Tile2.attachMovie (tile2.SuitName, "FacePaint", 1);
+//		theSayingsScreen.Tile2.FacePaint.gotoAndStop (tile2.FaceValue);
+//		theSayingsScreen.Saying.gotoAndStop (_root.ShuffledSayings.pop ());
+//		theSayingsScreen._visible = true;
+		// check if all sayings used up
+//		if (_root.ShuffledSayings.length <= 0)
+//		{
+//			var theSayings:Array = new Array ();
+//			for (var i = 0; i < theSayingsScreen.Saying._totalframes; i++)
+//			{
+//				theSayings.push (i);
+//			}
+//			_root.ShuffledSayings = getShuffledCopyOfList (theSayings);
+//		}
+	}
+	else
+	{
+		play_selected_sound ("match");
+	}
+	tile1.removeMovieClip ();
+	tile2.removeMovieClip ();
+}
+function isTilePresent (tileLayer, tileRow, tileColumn)
+{
+	return !(TilePositionArray[tileLayer][tileRow][tileColumn].IsRemoved || (TilePositionArray[tileLayer][tileRow][tileColumn] == undefined));
+}
+// user asks for hint of available tiles
+function show_hint ()
+{
+	if (hintID == undefined)
+	{
+		SelectedTile.deselect ();
+		var _which = randomInteger (0, FreePairs.length - 1);
+		hint_pair = FreePairs[_which];
+		hint_pair.Tile1.select ();
+		hint_pair.Tile2.select ();
+		if (_root.score>=_root.SelectedValue) _root.score -= _root.SelectedValue;
+		score_txt.text = _root.score;
+		hintID = setInterval (this, "hide_hint", 1000, hint_pair);
+	}
+}
+// hide hint
+function hide_hint (hint_pair)
+{
+	hint_pair.Tile1.deselect ();
+	hint_pair.Tile2.deselect ();
+	clearInterval (hintID);
+	hintID = undefined;
+}

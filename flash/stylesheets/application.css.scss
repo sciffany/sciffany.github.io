@@ -1,0 +1,103 @@
+
+@font-face { 
+	font-family: 'cl';
+    src: font-url('cl-webfont.tff');
+    src: font-url('cl-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('cl-webfont.woff2') format('woff2'),
+         font-url('cl-webfont.woff') format('woff'),
+         font-url('cl-webfont.ttf') format('truetype'),
+         font-url('cl-webfont.svg#cl-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 	
+	font-family: 'lobster';
+    src: font-url('lobstertwo-bold.tff');
+    src: font-url('lobstertwo-bold.eot?#iefix') format('embedded-opentype'),
+         font-url('lobstertwo-bold.woff2') format('woff2'),
+         font-url('lobstertwo-bold.woff') format('woff'),
+         font-url('lobstertwo-bold.ttf') format('truetype'),
+         font-url('lobstertwo-bold.svg#lobster_twobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* body
+{
+	background-image: image-url("banana.png");
+	background-repeat: no-repeat;
+} */
+
+div
+{
+	
+}
+
+/* * {
+	border: 1px dashed #FFFFFF;
+}*/
+
+#header {
+    float:left;
+	height:200px;
+    background:#7CF2AF;
+    width:100%;
+	border-radius:10px;
+}
+
+
+#title {
+	margin-left: 20px;
+	font-size:100px;
+	font-family: 'lobster', arial;
+	color: #41778C;
+	display: inline;
+}
+
+#subtitle {
+	display: inline;
+	font-size:50px;
+	font-family: 'lobster', arial;
+	color: #40A36B;
+	margin-left: 20px;
+}
+
+#middle {
+	float:left;
+	margin-top:10px;
+    height:100%;
+    background:#F7D086;
+    width:100%;
+	border-radius:10px;
+}
+
+#body_text {
+	font-family: 'cl', arial;
+	font-size:30px;
+	text-align: center;
+	color:#814D0A;
+}
+
+#small_body_text {
+	font-family: 'cl', arial;
+	font-size:20px;
+	text-align: center;
+	color:#814D0A;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will incl-webfontude all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

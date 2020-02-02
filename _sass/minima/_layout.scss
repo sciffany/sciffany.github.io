@@ -199,9 +199,11 @@
  * Page content
  */
 .page-content {
+  // position: fixed;
   margin-top: 100px;
   padding: $spacing-unit 0;
   flex: 1;
+  // overflow: scroll;
 }
 
 .page-heading {
@@ -242,6 +244,8 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  font-family: "Roboto";
+  font-weight: 600;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -250,6 +254,8 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  color: $grey-color-dark;
+  font-family: "Roboto";
 
   h2 {
     @include relative-font-size(2);
