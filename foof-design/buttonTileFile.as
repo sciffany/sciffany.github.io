@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;			public class buttonTileFile extends MovieClip {				public var tileFileNo: int;				public function buttonTileFile(tileFileNo:int) {			this.tileFileNo = tileFileNo;		}	}	}

@@ -1,0 +1,4 @@
+none
+blocked
+room
+mystical

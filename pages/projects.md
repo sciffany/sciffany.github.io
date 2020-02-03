@@ -9,40 +9,87 @@ order: "2"
 
 {% for post in site.categories["project"] %}
 
-- [{{post.title}}](#{{post.ref}})
+- [{{post.title}}](#{{post.ref}}) {%if post.star %}![](/assets/images/star.jpg) {%endif%}
+  {% endfor %}
 
-{% endfor %}
-
-<div style="font-size: 18px; margin-bottom: 30px">
-
-    <!-- Having worked in various tech roles in the last few years,
-    I gained valuable experience in  -->
-
-</div>
+<br />
 
 {% for post in site.categories["project"] %}
 
-<article class="archive-item">
+<article class="archive-item" style="margin-bottom:30px;">
+  <a name="{{post.ref}}"></a>
 
-    <a name="{{post.ref}}"></a>
+  <div class="card-contents">
+    <div class="card-col-1">
+      <div class="hover-image">
+        <img
+          src="/assets/images/{{post.image}}.png"
+          width="300px"
+          height="250px"
+          border="5"
+          style="border-radius: 10px; object-fit: cover; border-color: $gray-color-dark;"
+        />
+      </div>
 
+      <div class="center-hor">
+        <div class="link-wrapper" align="center">
+          {%if post.gh%}
+          <div>
+            <a href="{{ post.gh }}">
+              <img src="/assets/images/github.png" class="project-icon" />
+            </a>
+            <a href="{{ post.gh }}">
+              <span class="tiny">
+                Github
+              </span>
+            </a>
+          </div>
+          {%endif%} {%if post.link%}
 
-    <div class="card-contents">
-        <div class="card-col-1">
+          <div>
+            <a href="{{ post.link }}">
+              <img src="/assets/images/link.png" class="project-icon" />
+            </a>
+            <a href="{{ post.link }}">
+              <span class="tiny">
+                Website
+              </span>
+            </a>
+          </div>
+          {%endif%} {%if post.pdf%}
 
-        <div class="hover-image">
-            <img src="/assets/images/{{post.image}}.png" width="300px" height="250px"  border="2" style="border-radius: 10px; object-fit: cover; border-color: black;"/>
+          <div>
+            <a href="/assets/pdfs/{{ post.pdf }}.pdf">
+              <img src="/assets/images/pdf.jpg" class="project-icon" />
+            </a>
+            <a href="/assets/pdfs/{{ post.pdf }}.pdf">
+              <span class="tiny">
+                PDF
+              </span>
+            </a>
+          </div>
+          {%endif%}
         </div>
-        </div>
-        <div class="card-col-2">
-        <h3 style="margin-bottom:10px;"> <b>{{post.title}} </b></h3>
+      </div>
 
-        {{post.content}}
-
-        </div>
 
     </div>
+    <div class="card-col-2">
+    <div style="display: flex; ">
+      <h3 style="margin-bottom:10px; color:black;"><b>{{post.title}} </b></h3>
+      {%if post.star %} <img src="/assets/images/star.jpg" style="margin-left:10px; margin-top:10px;" width="20px" height="20px"> {%endif%}
 
+  </div>
+      <div class="plain-subs">
+        {{post.lang}}
+      </div>
+
+      <div style="margin-top:10px">
+        {{post.content}}
+      </div>
+    </div>
+
+  </div>
 </article>
 
 {% endfor %}

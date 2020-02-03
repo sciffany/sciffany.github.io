@@ -3,7 +3,9 @@
  */
 .site-header {
   min-height: $spacing-unit * 3;
-
+  // padding-top: 50px;
+  // padding-bottom: 20px;
+  z-index: 20;
   // Positioning context for the mobile navigation icon
   // position: fixed;
   width: 100%;
@@ -13,16 +15,16 @@
 .site-title-logo {
   float: left;
   display: flex;
-  width: 400px;
+  width: 500px;
   justify-content: space-evenly;
 }
 
 .site-title {
-  @include relative-font-size(2);
+  @include relative-font-size(2.4);
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
-  margin-top: $spacing-unit * 0.8;
+  margin-top: $spacing-unit * 1.5;
   margin-bottom: 0;
   margin-left: 100;
   float: left;
@@ -52,7 +54,7 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
-  margin-top: $spacing-unit * 0.8;
+  margin-top: $spacing-unit * 1.5;
   font-family: "Roboto";
 
   .nav-trigger {
@@ -64,7 +66,7 @@
   }
 
   .page-link {
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     line-height: $base-line-height;
 
@@ -202,10 +204,12 @@
 .page-content {
   // position: fixed;
   // margin-top: 100px;
+  // background-color: #efefef;
+
   font-family: "Roboto";
   padding: $spacing-unit 0;
   flex: 1;
-  font-size: 18px;
+  font-size: 22px;
   // overflow: scroll;
 }
 

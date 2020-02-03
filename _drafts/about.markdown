@@ -20,7 +20,7 @@ Coursework: Media Computing, Information Retrieval, Machine Learning, Computer N
 ## Technical Skills
 
 Languages - JavaScript & Typescript, C++, Java, Python, SQL, MATLAB
-Frameworks - Node.js, React/Redux, React Native, Ruby on Rails, Phaser.js, Postgres, Socket.io
+Frameworks - Node.js, React/Redux, React Native, Ruby on Rails, Phaser, Postgres, Socket.io
 DevOps - GCP (BigQuery, Firebase), AWS (EC2, Glue S3), CI/CD (Travis, Semaphore), Heroku, Netlify
 Creative - Graphic Design and Animation with Adobe Creative Suite and Blender Modelling Software
 

@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;			public class buttonMapName extends MovieClip {				public var mapNameNo: int;				public function buttonMapName(mapNameNo:int) {			this.mapNameNo = mapNameNo;		}	}	}

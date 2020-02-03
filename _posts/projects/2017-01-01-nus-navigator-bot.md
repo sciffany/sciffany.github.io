@@ -5,10 +5,13 @@ categories: [project]
 image: nav
 title: NUS Navigator Bot
 ref: nav
+lang: Python, Node.js
 ---
 
-<b>NUS Navigator Bot</b> is a Telegram application developed to help students
-find their way around the university.
+Telegram chat bot we developed during
+NUS Hack 'n' Roll to help students find their way around the university.
 
-I scraped the API for locations of buildings in the university, processed json files,
-and finally
+<b>My Role</b>:
+
+- Collected and transformed data from NUS API to find locations of buildings in NUS
+- Developed code to calculate nearest bus stop from building

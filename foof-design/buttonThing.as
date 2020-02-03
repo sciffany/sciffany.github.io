@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;			public class buttonThing extends MovieClip {				public var thingNo: int;				public function buttonThing(thingNo:int) {			this.thingNo = thingNo;		}	}	}
