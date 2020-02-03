@@ -23,13 +23,24 @@
 .card-col-2 {
   width: 55%;
   font-size: 18px;
-  margin-top: 30px;
 }
 
-.post-title-green {
-  color: darken($brand-color, 15%);
+.proj-card-col-1 {
+  width: 35%;
+}
+
+.proj-card-col-2 {
+  width: 65%;
+  font-size: 18px;
+}
+
+.my-post-title {
   font-family: "Roboto";
   font-weight: 700;
+}
+
+.green {
+  color: darken($brand-color, 15%);
 }
 
 .sub-heading {
@@ -40,7 +51,7 @@
 }
 
 .anchor {
-  padding-top: 100px;
+  // padding-top: 100px;
 }
 
 .holder {
@@ -60,4 +71,19 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.game-image {
+  border-radius: 10px;
+  width: 300px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.subs {
+  color: darken($grey-color, 10%);
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 1000;
+  font-style: oblique;
 }

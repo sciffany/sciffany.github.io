@@ -5,7 +5,7 @@
   min-height: $spacing-unit * 3;
 
   // Positioning context for the mobile navigation icon
-  position: fixed;
+  // position: fixed;
   width: 100%;
   background-color: $grey-color-dark;
 }
@@ -64,6 +64,7 @@
   }
 
   .page-link {
+    font-size: 18px;
     color: white;
     line-height: $base-line-height;
 
@@ -200,9 +201,11 @@
  */
 .page-content {
   // position: fixed;
-  margin-top: 100px;
+  // margin-top: 100px;
+  font-family: "Roboto";
   padding: $spacing-unit 0;
   flex: 1;
+  font-size: 18px;
   // overflow: scroll;
 }
 

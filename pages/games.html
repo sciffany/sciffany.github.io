@@ -1,0 +1,105 @@
+---
+layout: page
+title: Games
+permalink: /games/
+order: "3"
+---
+
+<h2><b>Powerpets Games</b></h2>
+
+<div style="font-size: 18px; margin-bottom: 30px">
+
+    I develop games for <a href="http://www.powerpets.com/" >Powerpets</a>, an awesome virtual pet site.
+    They are clones of old games there, but with graphics and algorithm optimisations done by me.
+
+</div>
+
+{% for post in site.categories["powerpets"] %}
+
+<article class="archive-item">
+    <div class="card-contents">
+        <div class="card-col-1">
+
+        <div class="hover-image">
+        <a href="{{ site.baseurl }}{{ post.url }}" ><img src="/assets/images/{{post.image}}.png" class="game-image"/></a>
+        </div>
+        </div><div class="card-col-2">
+            <a href="{{ site.baseurl }}{{ post.url }}" >
+            <h3 style="color: black;"><b>{{post.title}}</b></h3>
+        </a>
+        <div class="subs">
+            {{post.description}}
+        </div>
+
+        <div style="font-size: 18px; margin-top: 10px"><b>Algorithms: </b>{{post.algo}}</div>
+        <div style="font-size: 18px; margin-top: 10px"><b>Challenge: </b>{{post.challenge}}</div>
+        <div style="font-size: 18px; margin-top: 8px"><b>Graphics: </b>{{post.graphics}}
+        </div class="card-col-2">
+    </div>
+
+</article>
+{% endfor %}
+
+<h2 style="margin-top:20px;"><b>Flash Games</b></h2>
+
+I developed these flash games as an entry point to programming back in 2013 (15 y.o.).
+I coded everything entirely from scratch, and also designed all the graphics.
+
+{% for post in site.categories["games"] %}
+
+<article class="archive-item">
+    <div class="card-contents">
+        <div class="card-col-1">
+
+        <div class="hover-image">
+        <a href="{{ site.baseurl }}{{ post.url }}" ><img src="/assets/images/{{post.image}}.png" class="game-image"/></a>
+        </div>
+        </div><div class="card-col-2">
+            <a href="{{ site.baseurl }}{{ post.url }}" >
+            <h3 class="post-title green">{{post.title}}</h3></a>
+
+        {{post.description}}
+
+        <div style="font-size: 16px; margin-top: 8px"><b>Algorithms: </b>{{post.algo}}</div>
+        <div style="font-size: 16px; margin-top: 8px"><b>Challenge: </b>{{post.challenge}}</div>
+        <div style="font-size: 16px; margin-top: 8px"><b>Graphics: </b>{{post.graphics}}
+        <div style="font-size: 16px; margin-top: 8px"><b>Tutorial Credits: </b><a href="http://www.{{post.creds}}.com"  >{{post.creds}}.com</a></div>
+        
+        </div class="card-col-2">
+
+       
+    </div>
+
+</article>
+{% endfor %}
+
+
+<h2 style="margin-top:20px;"><b>WIP</b></h2>
+
+These are the games I'm currently working on:
+
+{% for post in site.categories["gamesWip"] %}
+
+<article class="archive-item">
+    <div class="card-contents">
+        <div class="card-col-1">
+
+        <div class="hover-image">
+        <a href="{{ site.baseurl }}{{ post.url }}" ><img src="/assets/images/{{post.image}}.png" width="300px" height="240px" style=" object-fit: cover;"/></a>
+        </div>
+        </div><div class="card-col-2">
+            <a href="{{ site.baseurl }}{{ post.url }}" >
+            <h3 class="post-title green">{{post.title}}</h3></a>
+
+        {{post.description}}
+
+        <div style="font-size: 14px; margin-top: 8px"><b>Tutorial Credits: </b><a href="http://www.{{post.creds}}.com"  >{{post.creds}}.com</a></div>
+
+        </div class="card-col-2">
+
+       
+    </div>
+
+</article>
+{% endfor %}
+

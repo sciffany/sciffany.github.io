@@ -53,8 +53,12 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-sample_list:
+links:
+  - title: Experience
+    url: experience/
   - title: Projects
-    url: projects.html
+    url: projects/
+  - title: Games
+    url: games/
   - title: Design
-    url: design.html
+    url: graphics/
