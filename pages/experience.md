@@ -29,7 +29,6 @@ order: "1"
 
 <article class="archive-item" style="margin-top: 30px;">
 
-
   <div class="card-contents">
     <div class="card-col-1" align="right" style="padding-right:40px;">
       <a href="{{post.link}}" style="color:black;" ><h3><b>{{post.title}} </b></h3></a>
