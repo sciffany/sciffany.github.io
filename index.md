@@ -8,7 +8,7 @@ title: Hello there
 
 I'm a Year 3 Computer Science student
 in National University of Singapore with a
-passion for software development and computer graphics.
+passion for software development, algorithms, and computer graphicss.
 <br/>
 <br/>
 
@@ -19,28 +19,28 @@ passion for software development and computer graphics.
 <div class="clearfix">
     <img src="/assets/images/invent.png" style="float: left; padding-right: 20px;"/>
     
-    I have always loved solving math problems and puzzles, so I naturally
+    I have always loved solving math problems and puzzles, as well as building 
+    and creating things, so I naturally
     loved coding.
-    Programming is an avenue for me to meet the needs
+    Coding is an opportunity for me to meet the needs
     of the society while doing what I love most.
 
     Check out my
-    <a href="/projects/"><b>software projects</b></a> and <a href="/experience/"><b>work experience</b></a>.
+    <a href="/experience/"><b>work experience</b></a> and <a href="/projects/"><b>software projects</b></a>.
 
 
     <br/>
     <br/>
 
-    <h5>Game Development</h5>
 
-    I started coding in 2013 inspired by the book,
+    I began coding in 2013
+    inspired by the book,
     <a href="https://inventwithpython.com/invent4thed/">
-    Invent Your Own Computer Games in Python by Al Sweigart</a>
+    Invent Your Own Computer Games in Python by Al Sweigart</a>.
 
-    and have since then created a lot of
-    <a href="/games/">
-        <b>games.</b>
-    </a>
+    I have since then developed several  <a href="/games/">
+        <b>games</b>
+    </a>, some of which are for a virtual pet site.
 
 </div>
 
@@ -55,8 +55,8 @@ emulate this in the
 <a href="graphics">
 <b>graphics</b>
 </a>
-I design. I have worked on many projects and several clients
-clients such as volunteer welfare organisations.
+I design. I have worked on many projects and several
+clients including volunteer welfare organisations.
 
 <br/>
 
@@ -66,10 +66,12 @@ clients such as volunteer welfare organisations.
 </h2>
 
 Languages,
-<a href="https://www.jetpunk.com/">trivia</a>, roller blading, learning instruments,
+<a href="https://www.jetpunk.com/">trivia</a>, learning instruments, roller blading,
 <a href="https://www.smbc-comics.com/">SMBC comics</a>
 
 <br/>
 
+I am always up to work on projects that will make an
+impact on the community.
 Get in touch at
-<a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>.
+<a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
