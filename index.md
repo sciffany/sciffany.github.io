@@ -53,7 +53,7 @@ passion for software development and computer graphics.
 Vibrant
 colors and bouncy animations of cartoons have always inspired me, and I strive to
 emulate this in the
-<a href="graphics">
+<a href="design">
 <b>graphics</b>
 </a>
 I design. I have worked on many projects and several
