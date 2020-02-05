@@ -8,7 +8,7 @@ title: Hello there
 
 I'm a Year 3 Computer Science student
 in National University of Singapore with a
-passion for software development, algorithms, and computer graphicss.
+passion for software development and computer graphicss.
 <br/>
 <br/>
 
@@ -40,7 +40,7 @@ passion for software development, algorithms, and computer graphicss.
 
     I have since then developed several  <a href="/games/">
         <b>games</b>
-    </a>, some of which are for a virtual pet site.
+    </a>.
 
 </div>
 
