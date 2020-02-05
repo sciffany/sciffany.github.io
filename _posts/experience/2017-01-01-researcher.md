@@ -4,7 +4,7 @@ permalink: /researcher/
 categories: [work]
 ref: researcher
 role: Student Researcher
-dur: June 2017 - February 2016
+dur: June 2015 - February 2016
 title: Agency for Science and Technology Research
 gh: https://github.com/sciffany/brain-research
 link: https://www.a-star.edu.sg/
