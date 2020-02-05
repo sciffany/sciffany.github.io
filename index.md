@@ -22,8 +22,8 @@ passion for software development and computer graphicss.
     I have always loved solving math problems and puzzles, as well as building 
     and creating things, so I naturally
     loved coding.
-    Coding is an opportunity for me to meet the needs
-    of the society while doing what I love most.
+    Coding is an opportunity for me to contribute 
+    to the society while doing what I love most.
 
     Check out my
     <a href="/experience/"><b>work experience</b></a> and <a href="/projects/"><b>software projects</b></a>.
@@ -38,9 +38,8 @@ passion for software development and computer graphicss.
     <a href="https://inventwithpython.com/invent4thed/">
     Invent Your Own Computer Games in Python by Al Sweigart</a>.
 
-    I have since then developed several  <a href="/games/">
-        <b>games</b>
-    </a>.
+    and have since then developed several  <a href="/games/">
+        <b>games</b></a>.
 
 </div>
 
