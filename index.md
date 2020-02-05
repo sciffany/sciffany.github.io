@@ -9,7 +9,7 @@ title: Hello there
 I'm a Year 3 Computer Science student
 in National University of Singapore with a
 passion for software development and computer graphics.
-<br/>
+
 <br/>
 
 <h2>
@@ -66,7 +66,7 @@ clients including volunteer welfare organisations.
 
 </h2>
 
-I am always up to work on projects that will make an
-impact on the community.
+I am always up to work on projects that will impact
+the community, and am always up for a challenge.
 Get in touch at
 <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>

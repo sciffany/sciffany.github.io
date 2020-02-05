@@ -1,97 +1,85 @@
-<div style="margin: 5px">
-    <div class="container">
-        <img class="game-image" src="/assets/images/{{post.image}}.png"/>
-        <div class="white-rectangle">
-
-            {% if post.gh %}
-                <a href="{{post.gh}}">
-                    <div class="play-word">
-                        <b>DOWNLOAD GAME</b>
-                    </div>
-                </a>
-
-            {% else %}
-                <a href=" {{ site.baseurl }} {{ post.url }}">
-                    <div class="play-word">
-                        <b>PLAY GAME</b>
-                    </div>
-                </a>
-            {% endif %}
-            <a class="btn" href="#open-modal#{{post.image}}">
-                <div class="play-word">
-                    <b>LEARN MORE</b>
-                </div>
-            </a>
+<div style="margin: 10px">
+  <div class="container">
+    <img class="game-image" src="/assets/images/{{post.image}}.png" />
+    <div class="white-rectangle">
+      {% if post.gh %}
+      <a href="{{post.gh}}">
+        <div class="play-word">
+          <b>DOWNLOAD GAME</b>
         </div>
+      </a>
+
+      {% else %}
+      <a href=" {{ site.baseurl }} {{ post.url }}">
+        <div class="play-word">
+          <b>PLAY GAME</b>
+        </div>
+      </a>
+      {% endif %}
+      <a class="btn" href="#open-modal#{{post.image}}">
+        <div class="play-word">
+          <b>LEARN MORE</b>
+        </div>
+      </a>
     </div>
+  </div>
 
-    <a href="{{ site.baseurl }}{{ post.url }}">
-        <h6 align="center" style="color: black; margin-top: 10px;">
-            <b>{{post.title}}
-            </b>
-        </h6>
-    </a>
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <h6 align="center" style="color: black; margin-top: 10px;">
+      <b>{{post.title}} </b>
+    </h6>
+  </a>
 
-    <div class="modal-window" id="open-modal#{{post.image}}">
-        <br/>
+  <div class="modal-window" id="open-modal#{{post.image}}">
+    <br />
 
-        <div style="overflow: scroll; max-height: 80vh;">
-            <a class="modal-close" href="#" title="Close">Close</a>
+    <div style="overflow: scroll; max-height: 80vh;">
+      <a class="modal-close" href="#" title="Close">Close</a>
 
-            <div align="center" style="font-size: 20px; ">
-                <img class="game-image" src="/assets/images/{{post.image}}.png"/>
+      <div align="center" style="font-size: 20px; ">
+        <img class="game-image" src="/assets/images/{{post.image}}.png" />
 
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                    <div class="post-title-line-top" style="opacity: 0%"></div>
-                    <h3 style="color: black;">
-                        <b>{{post.title}}
-                        </b>
-                    </h3>
-                    <div class="plain-subs">
-                        {{post.description}}
-                    </div>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <div class="post-title-line-top" style="opacity: 0%"></div>
+          <h3 style="color: black;">
+            <b>{{post.title}} </b>
+          </h3>
+          <div class="plain-subs">
+            {{post.description}}
+          </div>
 
-                    <div class="post-title-line">.</div>
-                </a>
-            </div>
-            {% assign postElements = "lang algo challenge graphics" | split: " " %}
-            {%
+          <div class="post-title-line">.</div>
+        </a>
+      </div>
+      {% assign postElements = "lang algo challenge graphics" | split: " " %} {%
       assign titles = "Language, Algorithms, Challenge, Graphics" | split: ", "
-      %}
-            {%for element in postElements %}
-                {% assign index = forloop.index |
-      minus: 1 %}
-                {% assign title=titles[index] %}
-                {% include game-desc.html
-      element=element title=title %}
-            {% endfor %}
-            {% if post.creds %}
-                <b>
-                    Tutorial Credits:
-                </b>
-                <a href="http://www.{{post.creds}}.com">{{post.creds}}</a>
-            {% endif %}
-            <br/>
+      %} {%for element in postElements %} {% assign index = forloop.index |
+      minus: 1 %} {% assign title=titles[index] %} {% include game-desc.html
+      element=element title=title %} {% endfor %} {% if post.creds %}
+      <b>
+        Tutorial Credits:
+      </b>
+      <a href="http://www.{{post.creds}}.com">{{post.creds}}</a>
+      {% endif %}
+      <br />
 
+      <div align="center" style="margin-top: 10px;">
+        {% if post.gh %}
+        <a href="{{post.gh}}">
+          <div class="play-word-normal">
+            <b>DOWNLOAD GAME</b>
+          </div>
+        </a>
 
-            <div align="center" style="margin-top: 10px;">
-                {% if post.gh %}
-                    <a href="{{post.gh}}">
-                        <div class="play-word-normal">
-                            <b>DOWNLOAD GAME</b>
-                        </div>
-                    </a>
-
-                {% else %}
-                    <a href=" {{ site.baseurl }} {{ post.url }}">
-                        <div class="play-word-normal">
-                            <b>PLAY GAME</b>
-                        </div>
-                    </a>
-                {% endif %}
-
-            </div>
-            <br/>
-        </div>
+        {% else %}
+        <a href=" {{ site.baseurl }} {{ post.url }}">
+          <div class="play-word-normal">
+            <b>PLAY GAME</b>
+          </div>
+        </a>
+        {% endif %}
+      </div>
+      <br />
     </div>
+  </div>
 </div>
