@@ -4,24 +4,23 @@ layout: plain-post
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+    {%- include head.html -%}
 
-  <body>
+    <body>
 
-    {%- include header.html -%}
+        {%- include header.html -%}
 
 
+        <main aria-label="Content" class="page-content">
+            <div class="wrapper body-wrapper" style="z-index: -100;">
 
-      <main class="page-content" aria-label="Content">
-        <div class="wrapper body-wrapper" style="z-index: -100;">
+                {{ content }}
 
-          {{ content }}
+            </div>
+        </main>
 
-        </div>
-      </main>
+        {%- include footer.html -%}
 
-      {%- include footer.html -%}
-    
-  </body>
+    </body>
 
 </html>

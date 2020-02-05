@@ -5,13 +5,28 @@ permalink: /games/
 order: "3"
 ---
 
+
+<h3>
+    <b>Games</b>
+</h3>
+
+Here are some games I developed for fun myself and fellow nerds.
+
+<div class="game-items">
+    {% for post in site.categories["otherGames"] %}
+        {%include portfolio.html %}
+    {% endfor %}
+</div>
+
+<br/>
+
+
 <h3>
     <b>Powerpets Games</b>
 </h3>
 
 These are games I developed for
-<a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet
-                                                                          site.
+<a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet site.
 <div class="game-items">
     {% for post in site.categories["powerpets"] %}
         {%include portfolio.html %}
@@ -19,7 +34,6 @@ These are games I developed for
 </div>
 
 
-<br/>
 <br/>
 <h3>
     <b>Flash Games</b>
@@ -36,7 +50,6 @@ site.categories["games"] %}
 </div>
 
 <br/>
-<br/>
 <h3>
     <b>Powerpoint Games</b>
 </h3>
@@ -51,7 +64,6 @@ MS Powerpoint.
     {% endfor %}
 </div>
 
-<br/>
 <br/>
 <h3 style="margin-top:20px;">
     <b>WIP</b>

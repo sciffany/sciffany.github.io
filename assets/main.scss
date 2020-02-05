@@ -189,7 +189,8 @@
   font-weight: 700px;
   top: 50%;
   left: 50%;
-  width: 120px;
+  padding: 10px;
+  max-width: 50%;
   transform: translate(-50%, -50%);
 
   &:hover {

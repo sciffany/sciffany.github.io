@@ -7,6 +7,7 @@ description: 2D tile-based map designer for Foof Game below
 algo:
 challenge:
 graphics: Adobe Photoshop, MS Paint
+lang: AS3
 ---
 
 <div align="center" style="margin-bottom: 20px;">

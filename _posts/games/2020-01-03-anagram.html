@@ -1,19 +1,66 @@
 ---
 layout: plain-post
-permalink: /canvas/
+permalink: /anagram/
 categories: [otherGames]
-image: minibubbles-image
-description: Anagram solving game
+image: anagram
+description: Anagram-solving game
 algo:
-challenge: Webscraping
+challenge: Webscraping dataset, words chosen based on word frequency in English Language 
 graphics: Done in HTML
+title: Entropius Anagram
+lang: Javascript, HTML 5, Python
 ---
 
-<div class="game-style" id="phaser-div">
-  <script type="module" src="/mini-bubbles/miniBubbles/src/main.js"></script>
-</div>
+<div class="bodyWrapper">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<embed
-  style="position:absolute;top:100px;left:0px;width:100%;height:calc(100% - 100px);"
-  src="http://sciffanycanvas.herokuapp.com/anagram"
-/>
+    <script type="text/javascript"></script>
+    <script src="/anagram//anagram.js"></script>
+
+
+    <canvas height="150px" id="canvas" tabindex="1"></canvas>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+    <!-- <script type = "text/javascript">var selection=["HELLO"]; var shuffled = ["ELLOH"]</script> -->
+    <script src="anagram.js" type="module"></script>
+</div>
+<div id="instructions">
+    <br/>
+    <b>Instructions</b><br/>
+    Shuffle the letters to guess the right word. 
+                                        There is only one correct answer. Anagrams of the correct answer will not be accepted.
+                                        Type in your answer using your keyboard or mouse.
+    <br/>
+    <br/>
+
+    <b>Keyboard shortcuts</b>
+    <br/>
+    <i>
+        Spacebar
+    </i>
+    - shuffle letters
+    <br/>
+    <i>
+        Shift+backspace
+    </i>- clear word
+    <br/>
+    <i>
+        Enter
+    </i>- reveal next letter
+    <br/>
+    <i>
+        1
+    </i>- previous word
+    <br/>
+    <i>
+        2
+    </i>- next word
+    <br/>
+    <br/>
+
+    <div align="center">
+
+        <a href="/games">Back to Games</a>
+    </div>
+</div>
