@@ -7,7 +7,7 @@ order: "3"
 
 
 <h3>
-    <b>Games</b>
+    <b>Nerd Games</b>
 </h3>
 
 Here are some games I developed for fun myself and fellow nerds.
@@ -18,23 +18,7 @@ Here are some games I developed for fun myself and fellow nerds.
     {% endfor %}
 </div>
 
-<br/>
 
-
-<h3>
-    <b>Powerpets Games</b>
-</h3>
-
-These are games I developed for
-<a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet site.
-<div class="game-items">
-    {% for post in site.categories["powerpets"] %}
-        {%include portfolio.html %}
-    {% endfor %}
-</div>
-
-
-<br/>
 <h3>
     <b>Flash Games</b>
 </h3>
@@ -50,6 +34,22 @@ site.categories["games"] %}
 </div>
 
 <br/>
+
+<h3>
+    <b>Powerpets Games</b>
+</h3>
+
+These are games I developed for
+<a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet site.
+<div class="game-items">
+    {% for post in site.categories["powerpets"] %}
+        {%include portfolio.html %}
+    {% endfor %}
+</div>
+
+
+<br/>
+
 <h3>
     <b>Powerpoint Games</b>
 </h3>
