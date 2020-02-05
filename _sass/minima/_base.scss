@@ -110,7 +110,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $base-font-weight;
+  font-family: "Montserrat";
+  color: darken($grey-color, 10%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /**
@@ -126,14 +130,14 @@ a {
 
   &:hover {
     color: $text-color;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
+      // text-decoration: underline;
     }
   }
 }
@@ -144,7 +148,7 @@ a {
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  padding-left: $spacing-unit / 4;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
@@ -202,10 +206,9 @@ pre {
 }
 
 .body-wrapper {
-  // background-color: white;
-  padding-top: 50px;
-  padding-right: 50px;
-  padding-left: 50px;
+  background-color: white;
+  margin-top: 50px;
+  padding: 50px;
 }
 
 /**

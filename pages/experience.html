@@ -1,37 +1,23 @@
 ---
-layout: page
+layout: plain-post
 title: Experience
 permalink: /experience/
 order: "1"
 ---
 
-<h3><b>Work</b></h3>
+<div class="post-title-line-top"></div>
+<header class="post-header">
+    <h1 class="post-title">Work Experience</h1>
+</header>
+<div class="post-title-line">.</div>
 
-{% for post in site.categories["work"] %}
-
-- [{{post.title}} {%if post.clar%}, {{post.clar}} {%endif%}](#{{post.ref}}) {% endfor %}
-
-<div style="font-size: 18px; margin-bottom: 30px; margin-top:50px"></div>
-
-<h3 style= "margin-top: 30px;"><b>Education</b></h3>
-
-{% for post in site.categories["edu"] %}
-
-- [{{post.title}} {%if post.clar%}, {{post.clar}} {%endif%}](#{{post.ref}}) {% endfor %}
-
-<div style="font-size: 18px; margin-bottom: 30px; margin-top:50px"></div>
-
-<div align="center">
-  <h2 style= "margin-top: 30px;"><b>Work</b></h2>
-</div>
-<hr/>
 {% for post in site.categories["work"] %}
 
 <article class="archive-item" style="margin-top: 30px;">
 
   <div class="card-contents">
     <div class="card-col-1" align="right" style="padding-right:40px;">
-      <a href="{{post.link}}" style="color:black;" ><h3><b>{{post.title}} </b></h3></a>
+      <a href="{{post.link}}"><h3 style="color:black;"><b>{{post.title}} </b></h3></a>
       
         <div class="plain-subs"><b>{{post.role}}</b></div>
         <div class="date">{{post.dur}}</div>
@@ -59,11 +45,15 @@ order: "1"
 </article>
 
 {% endfor %}
+<br/>
+<br/>
 
-<div align="center">
-  <h2 style= "margin-top: 30px;"><b>Education</b></h2>
-  <hr/>
-</div>
+<div class="post-title-line-top"></div>
+<header class="post-header">
+    <h1 class="post-title">Education</h1>
+</header>
+
+<div class="post-title-line"></div>
 
 {% for post in site.categories["edu"] %}
 
@@ -72,7 +62,7 @@ order: "1"
 
   <div class="card-contents">
     <div class="card-col-1" align="right" style="padding-right:40px;">
-      <a href="{{post.link}}" style="color:black;" ><h3><b>{{post.title}} </b></h3></a>
+      <a href="{{post.link}}" ><h3 style="color:black;"><b>{{post.title}} </b></h3></a>
       
         <div class="plain-subs"><b>{{post.role}}</b></div>
         <div class="date">{{post.dur}}</div>

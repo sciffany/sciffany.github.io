@@ -6,7 +6,7 @@ import {
   set,
   get,
   initState
-} from "./components/helper.js.js"
+} from "./components/helper.js"
 
 const STAGE_X = 800
 const STAGE_Y = 660

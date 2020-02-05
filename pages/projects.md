@@ -5,7 +5,7 @@ permalink: /projects/
 order: "2"
 ---
 
-<h2><b>Software projects</b></h2>
+<h3><b>Software projects</b></h3>
 
 {% for post in site.categories["project"] %}
 
@@ -22,12 +22,8 @@ order: "2"
   <div class="card-contents">
     <div class="card-col-1">
       <div class="hover-image">
-        <img
+        <img class="game-image"
           src="/assets/images/{{post.image}}.png"
-          width="300px"
-          height="250px"
-          border="5"
-          style="border-radius: 10px; object-fit: cover; border-color: $gray-color-dark;"
         />
       </div>
 

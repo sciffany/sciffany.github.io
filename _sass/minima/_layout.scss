@@ -7,9 +7,9 @@
   // padding-bottom: 20px;
   z-index: 20;
   // Positioning context for the mobile navigation icon
-  // position: fixed;
+  position: fixed;
   width: 100%;
-  background-color: $grey-color-dark;
+  background-color: darken($brand-color, 30%);
 }
 
 .site-title-logo {
@@ -29,6 +29,10 @@
   margin-left: 100;
   float: left;
   font-family: "Montserrat";
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &,
   &:visited {
@@ -55,7 +59,8 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
   margin-top: $spacing-unit * 1.5;
-  font-family: "Roboto";
+  font-family: "Montserrat";
+  font-size: 22px;
 
   .nav-trigger {
     display: none;
@@ -66,14 +71,25 @@
   }
 
   .page-link {
-    font-size: 20px;
     color: white;
     line-height: $base-line-height;
 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    // font-family: "Montserrat";
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
     }
+    &:hover {
+      text-decoration: none;
+      color: lighten($brand-color, 10%);
+    }
+  }
+
+  .clicked {
+    color: $brand-color;
   }
 
   @include media-query($on-palm) {
@@ -203,8 +219,8 @@
  */
 .page-content {
   // position: fixed;
-  // margin-top: 100px;
-  // background-color: #efefef;
+  margin-top: 100px;
+  background-color: #efefef;
 
   font-family: "Roboto";
   padding: $spacing-unit 0;
@@ -244,19 +260,31 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  // margin-bottom: $spacing-unit;
 }
 
 .post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
+  @include relative-font-size(2);
+  // letter-spacing: -1px;
   line-height: 1;
-  font-family: "Roboto";
   font-weight: 600;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+}
+
+.post-title-line {
+  border-top: 1px solid #eeeeee;
+  // margin-bottom: px;
+  color: white;
+}
+
+.post-title-line-top {
+  border-style: solid;
+  border-top: 10px;
+  margin-bottom: 20px;
+  color: #eeeeee;
 }
 
 .post-content {
@@ -287,4 +315,8 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+.clicked {
+  color: orange;
 }
