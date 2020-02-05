@@ -6,44 +6,61 @@ order: "3"
 ---
 
 <h3>
-  <b>Powerpets Games</b>
+    <b>Powerpets Games</b>
 </h3>
 
-<div style="margin-bottom: 30px">
-  These are games I developed for
-  <a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet
-  site.
+These are games I developed for
+<a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet
+                                                                          site.
+<div class="game-items">
+    {% for post in site.categories["powerpets"] %}
+        {%include portfolio.html %}
+    {% endfor %}
 </div>
 
-{% for post in site.categories["powerpets"] %} {%include portfolio.html %} {%
-endfor %}
 
-<br />
-<br />
+<br/>
+<br/>
 <h3>
-  <b>Flash Games</b>
+    <b>Flash Games</b>
 </h3>
 
 I developed these flash games as an entry point to programming back in 2013. I
-coded everything from scratch and painted the graphics myself. {% for post in
-site.categories["games"] %} {% include portfolio.html %} {% endfor %}
+coded everything from scratch and painted the graphics myself.
 
-<br />
-<br />
+<div class="game-items">
+    {% for post in
+site.categories["games"] %}
+        {% include portfolio.html %}
+    {% endfor %}
+</div>
+
+<br/>
+<br/>
 <h3>
-  <b>Powerpoint Games</b>
+    <b>Powerpoint Games</b>
 </h3>
 
 Before I discovered the magic of coding, I have always been curious about
 creating interactive programs with the computer. Here are some games I made in
-MS Powerpoint. {% for post in site.categories["ppt"] %} {% include
-portfolio.html %} {% endfor %}
+MS Powerpoint.
+<div class="game-items">
+    {% for post in site.categories["ppt"] %}
+        {% include
+    portfolio.html %}
+    {% endfor %}
+</div>
 
-<br />
-<br />
+<br/>
+<br/>
 <h3 style="margin-top:20px;">
-  <b>WIP</b>
+    <b>WIP</b>
 </h3>
 
-These are the games I'm currently working on: {% for post in
-site.categories["gamesWip"] %} {% include portfolio.html %} {% endfor %}
+These are the games I'm currently working on:
+<div class="game-items">
+    {% for post in
+    site.categories["gamesWip"] %}
+        {% include portfolio.html %}
+    {% endfor %}
+</div>

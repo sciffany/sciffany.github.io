@@ -36,7 +36,7 @@ passion for software development and computer graphicss.
     I began coding in 2013
     inspired by the book,
     <a href="https://inventwithpython.com/invent4thed/">
-    Invent Your Own Computer Games in Python by Al Sweigart</a>.
+    Invent Your Own Computer Games in Python by Al Sweigart</a>
 
     and have since then developed several  <a href="/games/">
         <b>games</b></a>.
