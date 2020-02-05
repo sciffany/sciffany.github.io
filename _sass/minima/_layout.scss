@@ -218,7 +218,6 @@
  * Page content
  */
 .page-content {
-  // position: fixed;
   margin-top: 100px;
   background-color: #efefef;
 
@@ -226,7 +225,7 @@
   padding: $spacing-unit 0;
   flex: 1;
   font-size: 22px;
-  // overflow: scroll;
+  // position: relative;
 }
 
 .page-heading {
@@ -315,7 +314,13 @@
     }
   }
 }
+.on-canvas {
+  position: relative;
+  z-index: 10;
+}
 
-.clicked {
-  color: orange;
+.can {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }

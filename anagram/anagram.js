@@ -2,11 +2,11 @@ import { selection, shuffled } from "./anagramStart.js"
 
 var c = document.getElementById("canvas")
 var ctx = canvas.getContext("2d")
+
 c.width = 1100
 c.height = 550
 c.style.width = "100%"
 c.style.height = "100%"
-
 var state = 1 //0-not playing, 1-playing, 2-ending
 window.addEventListener("resize", resizeCanvas, false)
 window.addEventListener("orientationchange", resizeCanvas, false)
