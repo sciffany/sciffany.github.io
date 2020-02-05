@@ -73,12 +73,23 @@
             {% endif %}
             <br/>
 
+
             <div align="center" style="margin-top: 10px;">
-                <a href=" {{ site.baseurl }} {{ post.url }}">
-                    <div class="play-word-normal">
-                        <b>PLAY GAME</b>
-                    </div>
-                </a>
+                {% if post.gh %}
+                    <a href="{{post.gh}}">
+                        <div class="play-word-normal">
+                            <b>DOWNLOAD GAME</b>
+                        </div>
+                    </a>
+
+                {% else %}
+                    <a href=" {{ site.baseurl }} {{ post.url }}">
+                        <div class="play-word-normal">
+                            <b>PLAY GAME</b>
+                        </div>
+                    </a>
+                {% endif %}
+
             </div>
             <br/>
         </div>

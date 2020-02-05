@@ -8,7 +8,7 @@ title: Hello there
 
 I'm a Year 3 Computer Science student
 in National University of Singapore with a
-passion for software development and computer graphicss.
+passion for software development and computer graphics.
 <br/>
 <br/>
 
@@ -32,11 +32,13 @@ passion for software development and computer graphicss.
     <br/>
     <br/>
 
-
-    I began coding in 2013
-    inspired by the book,
+    <h5>
+        Game development
+    </h5>
+    Inspired by the book
     <a href="https://inventwithpython.com/invent4thed/">
-    Invent Your Own Computer Games in Python by Al Sweigart</a>
+    Invent Your Own Computer Games in Python by Al Sweigart</a>,
+    I began coding in 2013
 
     and have since then developed several  <a href="/games/">
         <b>games</b></a>.

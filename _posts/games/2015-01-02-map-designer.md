@@ -13,7 +13,7 @@ lang: AS3
 <div align="center" style="margin-bottom: 20px;">
 
   <div class="background-color:black;">
-    <embed width="600px" height="500px" src="/flash/swfs/mapDesigner.swf" />
+    <embed width="800px" height="600px" src="/flash/swfs/mapDesigner.swf" />
   </div>
 
 <b>Instructions</b>: Click on tiles from the left panel and drag them onto the map
