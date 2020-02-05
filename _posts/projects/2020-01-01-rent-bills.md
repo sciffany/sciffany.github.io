@@ -14,7 +14,7 @@ Developed a web application to help homeowners to monitor tenant debit and credi
 
 <b>Key Features</b>:
 
-- Access for delegated keepers to help owner input payments
 - Two-column records for debit and credit balance for every tenant
-- Set varying monthly due dates for different tenants
 - Dashboards to monitor current tenant balance in different locations
+- Access for delegated keepers to help owner input payments
+- Set varying monthly due dates for different tenants

@@ -60,15 +60,9 @@ clients including volunteer welfare organisations.
 <br/>
 
 <h2>
-    <b>Other interests</b>
+    <b>Contact Me</b>
 
 </h2>
-
-Languages,
-<a href="https://www.jetpunk.com/">trivia</a>, learning instruments, roller blading,
-<a href="https://www.smbc-comics.com/">SMBC comics</a>
-
-<br/>
 
 I am always up to work on projects that will make an
 impact on the community.
