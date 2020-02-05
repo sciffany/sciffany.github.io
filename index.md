@@ -22,7 +22,7 @@ passion for software development and computer graphics.
     I have always loved solving math problems and puzzles, so I naturally
     loved coding.
     Programming is an avenue for me to meet the needs
-    a the society while doing what I love most.
+    of the society while doing what I love most.
 
     Check out my
     <a href="/projects/"><b>software projects</b></a> and <a href="/experience/"><b>work experience</b></a>.
@@ -31,13 +31,13 @@ passion for software development and computer graphics.
     <br/>
     <br/>
 
-    <h5>Beginnings</h5>
+    <h5>Game Development</h5>
 
     I started coding in 2013 inspired by the book,
     <a href="https://inventwithpython.com/invent4thed/">
-    Invent Your Own Computer Games in Python by Al Sweigart.</a>
+    Invent Your Own Computer Games in Python by Al Sweigart</a>
 
-    I have since then created a lot of
+    and have since then created a lot of
     <a href="/games/">
         <b>games.</b>
     </a>

@@ -8,9 +8,10 @@ lang: MATLAB
 pdf: stenography
 ---
 
-Developed application which conceals messages in music clips for reliable data transmission through air via inaudible high-frequency sound waves
+Developed application which conceals text messages in music clips for reliable data transmission through air via inaudible high-frequency sound waves
 
 **Methodology**
 
-- Encodes high-frequency sound waves into certain bands
-- Spectrogram is read
+- Translate ASCII of text message into binary
+- Encode bits into certain frequency bands in the inaudible high-frequency
+- Read FFT Spectrogram to

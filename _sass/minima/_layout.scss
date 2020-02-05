@@ -89,7 +89,7 @@
   }
 
   .clicked {
-    color: $brand-color;
+    color: lighten($brand-color, 10%);
   }
 
   @include media-query($on-palm) {

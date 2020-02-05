@@ -5,79 +5,39 @@ permalink: /games/
 order: "3"
 ---
 
-<h3><b>Powerpets Games</b></h3>
+<h3>
+    <b>Powerpets Games</b>
+</h3>
 
 <div style="margin-bottom: 30px">
 
-    These are games I developed for <a href="http://www.powerpets.com/" >Powerpets</a>, an awesome virtual pet site.
-    
+    These are games I developed for
+    <a href="http://www.powerpets.com/">Powerpets</a>, an awesome virtual pet site.
+
 </div>
 
 {% for post in site.categories["powerpets"] %}
+    {%include portfolio.html %}
 
-<article class="archive-item">
-    <div class="card-contents">
-        <div class="card-col-1">
 
-        <div class="hover-image">
-        <a href="{{ site.baseurl }}{{ post.url }}" style="color:black;" ><img src="/assets/images/{{post.image}}.png" class="game-image"/></a>
-        <div class="centered">Play Game</div>
-        </div>
-        </div><div class="card-col-2">
-            <a href="{{ site.baseurl }}{{ post.url }}" >
-            <h3 style="color: black;"><b>{{post.title}}</b></h3>
-        </a>
-        <div class="plain-subs">
-            {{post.description}}
-        </div>
-
-        <div style="font-size: 18px; margin-top: 10px"><b>Algorithms: </b>{{post.algo}}</div>
-        <div style="font-size: 18px; margin-top: 10px"><b>Challenge: </b>{{post.challenge}}</div>
-        <div style="font-size: 18px; margin-top: 8px"><b>Graphics: </b>{{post.graphics}}
-        </div class="card-col-2">
-    </div>
-
-</article>
 {% endfor %}
 
-<h3 style="margin-top:20px;"><b>Flash Games</b></h3>
+<h3 style="margin-top:20px;">
+    <b>Flash Games</b>
+</h3>
 
 I developed these flash games as an entry point to programming back in 2013 (15 y.o.).
 I coded everything entirely from scratch, and also designed all the graphics.
 
 {% for post in site.categories["games"] %}
+    {% include portfolio.html %}
 
-<article class="archive-item">
-    <div class="card-contents">
-        <div class="card-col-1">
-
-            <div class="hover-image">
-                <a href="{{ site.baseurl }}{{ post.url }}" style="color:black;" ><img src="/assets/images/{{post.image}}.png" class="game-image"/></a>
-                <div class="centered">Play Game</div>
-                </div>
-    <!-- </div> -->
-        </div><div class="card-col-2">
-            <a href="{{ site.baseurl }}{{ post.url }}" >
-                <h3 style="color: black;"><b>{{post.title}} </b></h3></a>
-            <div class="plain-subs">
-        {{post.description}}
-                </div>
-        <div style="font-size: 18px; margin-top: 8px"><b>Challenge: </b>{{post.challenge}}</div>
-        <div style="font-size: 18px; margin-top: 8px"><b>Graphics: </b>{{post.graphics}}
-        {% if post.creds %}
-            <div style="font-size: 18px; margin-top: 8px"><b>Tutorial Credits: </b><a href="http://www.{{post.creds}}.com"  >{{post.creds}}.com</a></div>
-            {% endif %}
-        </div class="card-col-2">
-
-       
-    </div>
-
-</article>
 {% endfor %}
 
 
-
-<h3 style="margin-top:20px;"><b>Powerpoint Games</b></h3>
+<h3 style="margin-top:20px;">
+    <b>Powerpoint Games</b>
+</h3>
 
 Before I discovered the magic of programming, 
 I have always wanted to make the computer do things.
@@ -85,62 +45,19 @@ I have always wanted to make the computer do things.
 
 {% for post in site.categories["ppt"] %}
 
-<article class="archive-item">
-    <div class="card-contents">
-        <div class="card-col-1">
+    {% include portfolio.html %}
 
-            <a name="{{post.image}}"></a>
-
-        <div class="hover-image">
-        <a href="{{ site.baseurl }}{{ post.url }}" style="color:black;" ><img src="/assets/images/{{post.image}}.jpeg" class="game-image" /></a>
-        <div class="centered">Play Game</div>
-        </div>
-        </div><div class="card-col-2">
-            <a href="{{ site.baseurl }}{{ post.url }}" >
-            <h3 style="color: black;"><b>{{post.title}}</b></h3>
-            <a name="{{post.image}}"></a>
-
-        </a>
-        <div class="plain-subs">
-            {{post.description}}
-        </div>
-
-        <div style="font-size: 18px; margin-top: 10px"><b>Algorithms: </b>{{post.algo}}</div>
-        <div style="font-size: 18px; margin-top: 10px"><b>Challenge: </b>{{post.challenge}}</div>
-        <div style="font-size: 18px; margin-top: 8px"><b>Graphics: </b>{{post.graphics}}
-        </div class="card-col-2">
-    </div>
-
-</article>
 {% endfor %}
 
 
-
-<h3 style="margin-top:20px;"><b>WIP</b></h3>
+<h3 style="margin-top:20px;">
+    <b>WIP</b>
+</h3>
 
 These are the games I'm currently working on:
 
 {% for post in site.categories["gamesWip"] %}
 
-<article class="archive-item">
-    <div class="card-contents">
-        <div class="card-col-1">
+    {% include portfolio.html %}
 
-        <div class="hover-image">
-        <a href="{{ site.baseurl }}{{ post.url }}" ><img src="/assets/images/{{post.image}}.png" width="300px" height="240px" style=" object-fit: cover;"/></a>
-        </div>
-        </div><div class="card-col-2">
-            <a href="{{ site.baseurl }}{{ post.url }}" >
-            <h3 class="post-title green">{{post.title}}</h3></a>
-
-        {{post.description}}
-
-        <div style="font-size: 14px; margin-top: 8px"><b>Tutorial Credits: </b><a href="http://www.{{post.creds}}.com"  >{{post.creds}}.com</a></div>
-
-        </div class="card-col-2">
-
-       
-    </div>
-
-</article>
 {% endfor %}

@@ -1,0 +1,35 @@
+<article class="archive-item">
+  <div class="card-contents">
+    <div class="card-col-1">
+      <div class="hover-image">
+        <a href="{{ site.baseurl }}{{ post.url }}" style="color:black;"
+          ><img class="game-image" src="/assets/images/{{post.image}}.png"
+        /></a>
+        <div class="centered">Play Game</div>
+      </div>
+    </div>
+    <div class="card-col-2">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <h3 style="color: black;">
+          <b>{{post.title}} </b>
+        </h3>
+      </a>
+      <div class="plain-subs">
+        {{post.description}}
+      </div>
+
+      <div style="font-size: 20px;">
+        {% assign postElements = "algo challenge graphics" | split: " " %} {%
+        assign titles = "Algorithms, Challenge, Graphics" | split: ", " %} {%for
+        element in postElements %} {% assign index = forloop.index | minus: 1 %}
+        {% assign title=titles[index] %} {% include game-desc.html
+        element=element title=title %} {%endfor%} {% if post.creds %}
+        <b>
+          Tutorial Credits:
+        </b>
+        <a href="http://www.{{post.creds}}.com">{{post.creds}}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>
