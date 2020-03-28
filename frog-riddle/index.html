@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="style.css"></link>
+
+    <div class="wrapper">
+      <div class="title">
+        Ted-Ed Frog Riddle Solution
+      </div>
+
+      <div class="subtitle">
+        <div>
+            If likelihood of male frog croaking at any point in time is <span id="demo"> 1/1</span>
+        </div>
+        <input id="range" type="range" min="1" max="1000" value="1000" class="slider">
+      </div>
+
+
+    <div class="simulation">
+        <div class="vertical">
+            <div class="horizontal">
+                <div class="vertical">
+                    Boy & Boy
+                    <img id="bb" src="images/bb.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="croaker annotate blue white">P (croaks + no female)</div>
+                        <div class="side" >
+                            <div class="croaker-side blue"></div>
+                            <div class="silent-small annotate grey white">silent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    Boy & Girl
+                    <img id="bg" src="images/bg.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="croaker annotate">P (croaks + has female)</div>
+                        <div class="silent annotate white">silent</div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    Girl & Boy
+                    <img id="gb" src="images/gb.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="croaker annotate">P (croaks + has female)</div>
+                        <div class="silent annotate white">silent</div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    Girl & Girl
+                    <img id="gg" src="images/gg.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="silent-forever annotate white">silent</div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="formula">
+            P (has girl | croak)
+            <div id="condFormula">
+                = \( P (\ has\ girl\ \cap\ croak ) \
+                \over P (croak) \)
+                <span id="formula1"></span>
+            </div>
+            
+            <div class="answer">
+                = <span id="num1">2</span>/<span id="den1">3</span>
+                or <span class="bold" id="ans1">
+                    66.7</span>%
+            </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        
+        <div class="vertical">
+            <div class="horizontal">
+                <div class="vertical">
+                    Girl
+                    <img id="g" src="images/g.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="silent-forever-girl annotate">P (silent + has female)</div>
+                    </div>
+                    
+                </div>
+                <div class="vertical">
+                    Boy
+                    <img id="b" src="images/b.png" class="frog2"></src>
+                    <div class="square">
+                        <canvas width="150" height="150" class="can inner"></canvas>
+                        <div class="croaker annotate grey white">croaks</div>
+                        <div class="silent annotate blue white">P(silent + no female)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formula">
+                P (has girl | silent)
+                <div id="condFormula">
+                    = \( P (\ has\ girl\ \cap\ silent ) \
+                    \over P (silent) \)
+                </div>
+                <div class="answer">
+                    = <span id="num2">1</span>/<span id="den2">1</span>
+                    or <span class="bold" id="ans2">
+                        100.0</span>%
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+    <div class="subtitle long">
+        <div>
+            Best direction to run: <span class="bold">Right</span>
+        </div>
+
+        <br/>
+        <b>Explanation: </b><br/>
+        <div>
+            We make a model such that at any point in time, there is a certain probability, <span id="demo2" class="bold">1/1</span>, that
+            male frogs croak.
+    
+            <br/>
+            <br/>
+            Using <b>Bayes' rule</b>, we can calculate 2 probabilities:
+            <br/>
+            <br/>
+            (1) Given that you heard a croak from the left, what is the probability that the left-side croak comes from 
+            a male-female pair?
+            <br/>
+
+            <br/>
+            (2) Given that it was silent on the right side, what is the probability that the silence comes from a female?
+            <br/>
+        </div>
+
+        
+
+        
+    </div>
+
+
+   
+
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

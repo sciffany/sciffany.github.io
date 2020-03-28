@@ -1,0 +1,169 @@
+.title {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 20px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formula {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 50px;
+}
+
+.text {
+  font-family: Arial;
+}
+
+#demo {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.girl {
+  color: palevioletred;
+}
+
+.frog2 {
+  height: 100px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simulation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.horizontal > div {
+  margin: 0px 10px;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+  background-color: #555;
+}
+
+.line {
+  border-left: 1px solid black;
+  height: 300px;
+  margin: 0px 50px;
+}
+
+#range {
+  width: 300px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.answer {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.croaker {
+  height: 150px;
+  width: 150px;
+  background-color: palevioletred;
+}
+
+.croaker-side {
+  height: 0px;
+  width: 150px;
+}
+
+.silent-small {
+  height: 0px;
+  width: 0px;
+}
+
+.male-croaker {
+  height: 150px;
+  width: 150px;
+  background-color: MidnightBlue;
+}
+
+.silent {
+  height: 0px;
+  width: 150px;
+  background-color: #555;
+}
+
+.silent-forever {
+  height: 150px;
+  width: 150px;
+  background-color: #555;
+}
+
+.silent-forever-girl {
+  height: 150px;
+  width: 150px;
+  background-color: palevioletred;
+}
+
+.annotate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+
+  color: black;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.white {
+  color: white;
+}
+
+.grey {
+  background-color: #555;
+}
+
+.blue {
+  background-color: MidnightBlue;
+}
+
+.side {
+  display: flex;
+  flex-direction: row;
+}
+
+.inner {
+  position: absolute;
+}
