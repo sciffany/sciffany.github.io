@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="main.js"></script>
+    <div class="wrapper">
+      <div class="title">
+        Random Message Generator
+      </div>
+        <div class="subtitle">
+            Your chat history
+        </div>
+        <div>
+              <textarea class="big mt" id="train"></textarea>
+        </div>
+        <div>
+            <button onclick="proc()">Process</button><span class="glyphicon glyphicon-ok check" id="check"></span></p> 
+        </div>
+        <div>
+            Prompt: <input id="test"></input><button onclick="clicked()">Generate</button>
+        </div>
+        <div>
+            <textarea class="big mt" id="res"></textarea>
+        </div>
+
+        Credits:
+        <a href="https://www.codingame.com/playgrounds/41655/how-to-build-a-chatbot-in-less-than-50-lines-of-code">Codingame.com</a>
+      
+      </div>   
+      
+
+  </body>
+</html>

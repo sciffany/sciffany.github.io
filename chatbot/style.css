@@ -1,0 +1,44 @@
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.big {
+    height: 200px;
+    width: 400px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mt {
+    margin-top: 10px;
+}
+
+.check {
+    visibility: hidden;
+}
