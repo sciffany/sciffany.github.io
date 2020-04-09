@@ -52,6 +52,7 @@ function placeSuccessor(bigram, successor) {
 function clicked() {
     var testText = document.getElementById("test").value
     try {
+        testText = testText.toLowerCase()
         results = Array(10)
             .fill()
             .map((_) => gen(testText))
@@ -69,9 +70,9 @@ function gen(test) {
     var s = obtainDouble(test)
     var result = []
     var count = 0
+    result = result.concat(s)
     while (result.length < 10 || result.length > 20) {
-        result = result.concat(s)
-        while (result[result.length - 1] != "") {
+        while (result[result.length - 1] != "" && result.length < 20) {
             var lastTwo = result[result.length - 2] + " " + result[result.length - 1]
             var w = weightedRandom(bigrams[lastTwo])
             result.push(w)
