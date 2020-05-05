@@ -5,20 +5,34 @@ const mid_x = 1080 / 2
 const mid_y = 720 / 2
 const bpm = 40
 const frameRate = 50 //50 frames per bar
-const startButton = document.getElementById("startButton")
 
 var barNumber = 0
 var frameNumber = 0
 
 var start = Date.now()
 
-startButton.addEventListener("click", startAnim)
+document.getElementById("pianoButton").addEventListener("click", () => startSound(pianoSound))
+document.getElementById("voiceButton").addEventListener("click", () => startSound(voiceSound))
+var pianoSound = new Audio('/canon/canon_piano.mp3')
+var voiceSound = new Audio('/canon/canon_voice.mp3')
+
+var currSound = null
+var currInterval = null
 drawBg()
 
-function startAnim() {
-    setInterval(animate_exact, (60 * 1000) / bpm / frameRate)
-    playMusic([har1, har2, tenC, cello], bpm)
+function startSound(sound) {
+    barNumber = 0
+    frameNumber = 0
+    if (currInterval) {
+        clearInterval(currInterval)
+        currSound.pause()
+        currSound.currentTime = 0
+    }
+    currInterval = setInterval(animate_exact, (60 * 1000) / bpm / frameRate)
+    sound.play()
+    currSound = sound
 }
+
 
 function breakIntoPhrases(part) {
     return part.split(" ")
@@ -200,98 +214,6 @@ function note_to_height(note, part) {
         }
         return cel(ascii - 48) //to obtain the note value 1-8
     }
-}
-
-const delay = ms => new Promise(res => setTimeout(res, ms));
-const transpose = array => array[0].map((col, i) => array.map(row => row[i]));
-const raiseOctave = (numberNote, partNo) => partNo===0? numberNote*2: numberNote
-function setIntervalAndExecute(fn, t) {
-    fn();
-    return(setInterval(fn, t));
-}
-
-// Play the entire orchestra
-async function playMusic(parts, bpm) {
-    const barDur = 60000/bpm
-    parts = parts.map( (part, playerNo) => {
-        bars = part.split(" ")
-        return bars.map( (bar) => parseBar(bar, playerNo, barDur) )
-    })
-    parts = transpose(parts)
-    for (var i=0; i<parts.length; i++) {
-        await playBar(parts[i], barDur)
-    }
-}
-
-// Converts the raw string into a series of numbered notes
-function parseBar(notes, playerNo, barDur) {
-    var beatDur = barDur / notes.length
-    var notesArr = []
-    for (var i = 0; i < notes.length; i++) {
-        if (notes[i] === ".") {
-            notesArr[notesArr.length-1][1] += beatDur
-        } else {
-            var numberedNote = raiseOctave(noteValues[notes[i]]/2, playerNo)
-            notesArr.push( [numberedNote, beatDur])
-        }
-    }
-    return notesArr
-}
-
-// Play a bar (one bar)
-async function playBar(bar, barDur) {
-    await bar.forEach(async (solo) => await playSolo(solo))
-    await delay(barDur)
-}
-
-// Play one part
-async function playSolo(solo){
-    for (var i = 0; i < solo.length; i++) {
-        var [noteValue, noteDur] = solo[i]
-        await playNote(noteValue, noteDur)
-        await delay(noteDur)
-    }
-}
-
-var noteValues = {
-    "C": 261.6*2, 
-    "D": 293.7*2,
-    "E": 329.6*2,
-    "F": 349.2*2,
-    "G": 392.0*2,
-    "A": 220.0*2,
-    "B": 233.1*2,
-    "1": 261.6,
-    "2": 293.7,
-    "3": 329.6,
-    "4": 349.2,
-    "5": 392.0,
-    "6": 220.0,
-    "7": 233.1,
-    "0": 0,
-}
-
-async function playNote(noteValue, noteDur) {
-    if (!noteValue) { return }
-    var context = new AudioContext()
-    var o = context.createOscillator()
-    var g = context.createGain()
-    o.connect(g)
-    g.connect(context.destination)
-    o.frequency.value = noteValue
-    o.type = "sine"
-    o.start(0)
-    g.gain.exponentialRampToValueAtTime(
-        1.0, 0.9
-    )
-
-    g.gain.exponentialRampToValueAtTime(
-        0.00001, noteDur/1000 * 2
-    )
-
-    o.stop(noteDur/1000 * 1)
-
-    setTimeout(() => context.close(), noteDur*2)
 }
 
 function part_to_colour(part) {
