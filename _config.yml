@@ -69,3 +69,4 @@ links:
 # Disqus Comments
 disqus:
   shortname: sciffany-github-io
+highlighter: rouge

@@ -7,7 +7,7 @@ order: "5"
 
 <div class="blog-index">
 
-Here, I document things I learn and blog about my mini projects. Hopefully, others will find these information useful. I'll be writing mainly about coding, math, animation, but will every now and then also share about topics such as life.
+Here, I document things I learn and blog about my mini projects. I'll be writing mainly about coding, math, animation, but will every now and then also share about topics such as science and philosophy.
 
 </div>
 <br/>
