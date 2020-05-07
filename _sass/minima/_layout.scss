@@ -12,6 +12,10 @@
   background-color: darken($brand-color, 30%);
 }
 
+.moveable-header {
+  position: relative;
+}
+
 .site-title-logo {
   float: left;
   display: flex;
@@ -76,8 +80,8 @@
 
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 20px;
-    // font-family: "Montserrat";
+    font-size: 19px;
+
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
@@ -228,6 +232,10 @@
   // position: relative;
 }
 
+.no-header-margin {
+  margin-top: 0px;
+}
+
 .page-heading {
   @include relative-font-size(2);
 }
@@ -255,13 +263,6 @@
   @include relative-font-size(1.5);
 }
 
-/**
- * Posts
- */
-.post-header {
-  // margin-bottom: $spacing-unit;
-}
-
 .post-title {
   @include relative-font-size(2);
   // letter-spacing: -1px;
@@ -275,7 +276,6 @@
 
 .post-title-line {
   border-top: 2px solid #eeeeee;
-  // margin-bottom: px;
   color: white;
 }
 
@@ -322,4 +322,27 @@
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.blog-content {
+  margin-bottom: $spacing-unit;
+  color: $grey-color-dark;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: black;
+    font-family: Roboto;
+    text-transform: None;
+    letter-spacing: normal;
+  }
+}
+
+.rob {
+  font-family: Roboto;
+}
+
+.black {
+  color: black;
 }

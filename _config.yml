@@ -63,3 +63,9 @@ links:
     url: games/
   - title: Design
     url: design/
+  - title: Blog
+    url: blog/
+
+# Disqus Comments
+disqus:
+  shortname: sciffany-github-io
