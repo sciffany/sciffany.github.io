@@ -12,9 +12,7 @@ var frameNumber = 0
 var start = Date.now()
 
 document.getElementById("pianoButton").addEventListener("click", () => startSound(pianoSound))
-document.getElementById("voiceButton").addEventListener("click", () => startSound(voiceSound))
 var pianoSound = new Audio('/canon/canon_piano.mp3')
-var voiceSound = new Audio('/canon/canon_voice.mp3')
 
 var currSound = null
 var currInterval = null
