@@ -4,12 +4,11 @@ title: Applets
 permalink: /blog/applets/
 ---
 
-
 {% for post in site.categories["applet"] %}
 
-<h2>
+<h3>
     <a href = "{{post.link}}"> {{post.title}}</a> {%if post.star %} <img src="/assets/images/star.jpg"> {%endif%}
-</h2><div class="blog-index"> {{post.description}}
+</h3><div class="blog-index"> {{post.description}}
 
 <div class="gray">
     {{post.date | date: "%B %-d, %Y"}}
