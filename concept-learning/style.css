@@ -1,0 +1,23 @@
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#svg {
+    width: 1350px;
+    height: 800px;
+}
+.big {
+    height: 100px;
+    width: 400px;
+}

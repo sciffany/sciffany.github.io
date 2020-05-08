@@ -4,7 +4,7 @@ permalink: /blog/phaser-tut
 categories: [blog]
 title: Phaser 3 Initialization Tutorial
 description: How to initialize a Phaser 3 game
-tags: [gaming]
+tags: [coding, phaser, tutorial]
 comments: true
 ---
 

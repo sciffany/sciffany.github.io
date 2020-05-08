@@ -32,6 +32,8 @@ links:
 blogLinks:
   - title: Blog
     url : blog/
+  - title: Applets
+    url : blog/applets/
   - title: About
     url: blog/about/
 
@@ -39,3 +41,7 @@ blogLinks:
 disqus:
   shortname: sciffany-github-io
 highlighter: rouge
+
+# Sitemap
+plugins:
+  - jekyll-sitemap

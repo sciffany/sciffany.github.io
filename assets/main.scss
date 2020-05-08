@@ -297,7 +297,14 @@
 .blog-date {
   color: darken($grey-color, 10%);
   margin-top: 10px;
+  font-size: 18px;
+}
+
+.blog-file-label {
+  color: darken($grey-color, 10%);
+  margin-top: 10px;
   font-size: 14px;
+  font-style: oblique;
 }
 
 .i {

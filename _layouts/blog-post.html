@@ -10,12 +10,9 @@
                 {%- include blog-header.html -%}
                 <article class="post">
                     <div class="post-title-line-top" ></div>
-                    <header class="post-header" >
-                        <h1 class="black" style="text-transform: uppercase;">{{ page.title | escape }}</h1>
-                    </header>
-                    
+                    <h1 class="black" style="text-transform: uppercase;">{{ page.title | escape }}</h1>
                     {%if page.date %}
-                        <div class="blog-date">by {{site.title}} on {{ page.date | date: "%B %-d, %Y" }}</div>
+                        <div class="blog-date"> {{ page.date | date: "%B %-d, %Y" }}</div>
                         <br/>
                     {%else%}
                         <div class="post-title-line" >.</div>
@@ -29,6 +26,13 @@
                     {% if page.comments and jekyll.environment == "production"  %} 
                         {%- include disqus.html %}
                     {% endif %}
+
+                    {% if page.summary %}
+                    <meta name="description" content="{{ page.summary | escape }}">
+                    {% endif %}
+                    {%if page.tags %}
+                    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+                    {%endif %}
                 </article>
             </div>
         </main>
