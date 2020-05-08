@@ -10,10 +10,12 @@
     </span>
   </label>
   <div class="trigger">
-    {%- for my_page in site.links -%} {% assign my_url = "/" | append: my_page.url %} {%- if my_url == page.url -%}
+    {%- for my_page in site.links -%} {% assign my_url = "/" | append: my_page.url %}
+    {%- if my_url == page.url -%}
     <a class="page-link clicked" href="{{ my_page.url | relative_url }}">
       {%- else -%}
-      <a class="page-link" href="{{ my_page.url | relative_url }}"> {%- endif -%} {{ my_page.title | escape }}</a>
+      <a class="page-link" href="{{ my_page.url | relative_url }}"> {%- endif -%}
+        {{ my_page.title | escape }}</a>
     </a>
 
     {%- endfor -%}

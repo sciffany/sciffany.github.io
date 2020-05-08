@@ -5,18 +5,11 @@ permalink: /blog/
 order: "5"
 ---
 
-<div class="blog-index">
-
-Here, I document things I learn and blog about my mini projects. I'll be writing mainly about coding, math, animation, but will every now and then also share about topics such as science and philosophy.
-
-</div>
-<br/>
-
 {% for post in site.categories["blog"] %}
 
-<h3>
-    <a href = "{{post.permalink}}" style="color: #1F664D"> {{post.title}}</a>
-</h3>
+<h2>
+    <a href = "{{post.permalink}}" class="blog-index-title"> {{post.title}}</a>
+</h2>
 
 <div class="blog-index">
 

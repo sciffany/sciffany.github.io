@@ -1,0 +1,9 @@
+<nav class="blog-nav" style="font-family: 'Arimo'; text-transform: uppercase;">
+  <div class="trigger">
+      {%- for my_page in site.blogLinks -%} {% assign my_url = "/" | append: my_page.url %}
+        <a class="page-link" href="{{ my_page.url | relative_url }}"> 
+          {{ my_page.title | escape }}</a>
+      </a>
+      {%- endfor -%}
+  </div>
+</nav>

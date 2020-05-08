@@ -324,25 +324,55 @@
   width: 100%;
 }
 
+
+/* Blog */
 .blog-content {
   margin-bottom: $spacing-unit;
   color: $grey-color-dark;
-
+  font-size: 19px;
   h1,
   h2,
   h3,
   h4 {
     color: black;
-    font-family: Roboto;
+    font-family: 'Roboto';
     text-transform: None;
     letter-spacing: normal;
   }
 }
 
 .rob {
-  font-family: Roboto;
+  font-family: 'Roboto';
 }
 
 .black {
   color: black;
+}
+
+.blog-nav {
+  font-size: 15px;
+  color: black;
+
+  .page-link {
+    padding: 5px 10px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+}
+
+.blog-header {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog-index-title {
+  color: #1F664D;
+}
+
+.blog-index {
+  font-size: 20px;
 }

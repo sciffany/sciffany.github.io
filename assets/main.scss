@@ -7,8 +7,8 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:500);
 @import url(http://fonts.googleapis.com/css?family=Roboto:700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
-@import url(http://fonts.googleapis.com/css?family=Arimo:700);
-@import url(fruity.css);
+@import url(http://fonts.googleapis.com/css?family=Arimo:400);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400);
 
 .archive-item {
   margin-top: 20px;
@@ -281,4 +281,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.code-block {
+  width: 800px;
 }
