@@ -329,7 +329,7 @@
 .blog-content {
   margin-bottom: $spacing-unit;
   color: $grey-color-dark;
-  font-size: 19px;
+  font-size: 18px;
   h1,
   h2,
   h3,
@@ -354,10 +354,10 @@
   color: black;
 
   .page-link {
-    padding: 5px 10px;
+    padding: 0px 10px;
 
     &:not(:last-child) {
-      margin-right: 0;
+      margin-left: 0px;
     }
     margin-left: 20px;
   }

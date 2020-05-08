@@ -8,7 +8,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400);
-@import url(http://fonts.googleapis.com/css?family=Arial:200);
 
 .archive-item {
   margin-top: 20px;
@@ -123,9 +122,7 @@
 .date {
   color: darken($grey-color, 10%);
   margin-top: 10px;
-
   font-size: 18px;
-  // font-style: oblique;
 }
 
 .image-a {
@@ -285,4 +282,34 @@
 
 .code-block {
   width: 800px;
+}
+
+.grid-card{
+  width: 90%;
+  margin: 10px;
+  border-width: thin;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 25px;
+  overflow: scroll;
+}
+
+.blog-date {
+  color: darken($grey-color, 10%);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.i {
+  font-style: oblique;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.ib {
+  font-style: oblique;
+  font-weight: bold;
+
 }

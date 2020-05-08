@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    </head>
     {%- include head.html -%}
     <body>
         <main aria-label="Content" class="page-content no-header-margin">
@@ -12,7 +15,7 @@
                     </header>
                     
                     {%if page.date %}
-                        <div class="date">{{ page.date | date: "%B %-d, %Y" }}</div>
+                        <div class="blog-date">by {{site.title}} on {{ page.date | date: "%B %-d, %Y" }}</div>
                         <br/>
                     {%else%}
                         <div class="post-title-line" >.</div>
