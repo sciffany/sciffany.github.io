@@ -8,44 +8,41 @@ tags: [coding, phaser, tutorial]
 comments: true
 ---
 
-Below is a quick walkthrough on how to initialize a web browser game using Phaser 3.
+Below is a quick walkthrough on how to initialize a web browser game using Phaser 3. We will be producing the following "Hello World" scene.
 
-<figure>
-  
-  <img src="/assets/images/bubbas-image.png" width="300px"/>
-  <figcaption>
-    Sample web game created with Phaser 3
-  </figcaption>
-</figure>
+<img src="/assets/images/blog/phaserRect.png" width="400px;" align="center">
 
-# Download Node.js
+<br/>
+# Step 1: Download Node.js
+<div class="blog-title-line">.</div>
 
-Download Node.js from the <a href="https://nodejs.org/en/">official website</a> and follow the instructions there. Check that you have Node.js by running 
+We need Node.js to be able to use http-server which serves our resources to the browser.
 
-<div class="blog-file-label">terminal/command line</div>
+Download Node.js from the <a href="https://nodejs.org/en/">official website</a> and follow the instructions there. Check that you have Node.js by running the following on your command line.
+
+    $ node --version
+
+
+Node package manager (npm) should come installed with Node.js.
+
+<br/>
+# Step 2: Download http-server
+<div class="blog-title-line">.</div>
+
+After downloading Node.js and npm, download http-server using npm.
+
 {% highlight html %}
-node --version
+$ npm install http-server
 {% endhighlight %}
 
+With this, you are able to launch your own web server and serve up the game.
+Check the you have http-server by running the following command.
 
-# Download http-server
-
-Download <b><i>http-server</i></b> using npm. With this, you are able to launch your own web server and serve up the game.
-
-<div class="blog-file-label">terminal/command line</div>
 {% highlight html %}
-npm install http-server
+$ http-server .
 {% endhighlight %}
 
-
-Check the you have http-server by running the following.
-
-<div class="blog-file-label">terminal/command line</div>
-{% highlight html %}
-http-server .
-{% endhighlight %}
-
-Your terminal should say
+Your terminal should display the following message.
 {% highlight html %}
 Starting up http-server, serving ./
 Available on:
@@ -53,13 +50,16 @@ Available on:
   http://your.ip.address:8080
 {% endhighlight %}
 If you see this, that means that
-your folder is being correctly served You can check this by visiting <span class="ib">localhost:8080</span> through your fave browser.
+your folder is being correctly served. You can check this by visiting <span class="b">localhost:8080</span> through your fave browser.
 You can abort your server by hitting Ctrl+C in terminal.
 
+<br/>
+# Step 3: Initial HTML file
+<div class="blog-title-line">.</div>
 
-# Initial HTML file
+Create a folder. Inside it, create a file called **index.html.**
 
-Create a root folder. Inside it, have a file called <span class="ib">index.html</span>. This is the main page that will be served by your server. Import <span class="ib">Phaser.js script</span> from online to enable Phaser.js functionalities, and import a file called <i><b>main.js</b></i> (which we'll edit in a while).
+This is the main page that will be served by your server. 
 
 <div class="blog-file-label">index.html</div>
 {% highlight html %}
@@ -73,13 +73,17 @@ Create a root folder. Inside it, have a file called <span class="ib">index.html<
   </body>
 </html> {% endhighlight %}
 
-# Initialize Phaser in javascript
+Here, we import `phaser.js` script from online to enable Phaser.js functionalities, and import a file called `main.js` (which we'll edit in a while).
 
-Using <span class="ib">main.js</span>, you can initialize a Phaser game with your very own scenes and configurations.
+<br/>
+# Step 4: Initialize Phaser in javascript
+<div class="blog-title-line">.</div>
+
+Using <span class="b">main.js</span>, you can initialize a Phaser game with your very own scenes and configurations.
 
 
-My scene names are <span class="ib">StartGame</span> and <span class="ib">Game</span>, but you can replace yours with a different set of names.
-Don't forget to replace <i><b>startGame.js, game.js, ...</b></i> too with the different files you'd use for your game.
+My scene names are `StartGame` and `Game`, but you can replace yours with a different set of names.
+Don't forget to replace `startGame.js` and `game.js` too with the different files you'd use for your game.
 
 
 <div class="blog-file-label">main.js</div>
@@ -104,10 +108,11 @@ var config = {
 new Phaser.Game(config)
 {% endhighlight %}
 
+<br/>
+# Step 5: Initialize scene
+<div class="blog-title-line">.</div>
 
-# Initialize scene
-
-Now, add these to each of your scene files. Each scene must extend Phaser.Scene, and inherit two functions, <b><i>preload()</i></b> and <b><i>create()</i></b>.
+In **StartGame.js** and your other scene files, make each scene extend Phaser.Scene, and inherit two functions, `preload()` and `create()`.
 
 <div class="blog-file-label">startGame.js</div>
 {% highlight javascript %}
@@ -117,43 +122,49 @@ export default class StartGame extends Phaser.Scene {
     super("startGame") /* Replace with scene key */
   }
   preload() {
-
+    // to be filled
   }
   create() {
-    
+    // to be filled
   }
 }
 
-
 {% endhighlight %}
-Make sure to replace <i><b>StartGame</b></i> with your scene name, and replace <i><b>"startGame"</b></i> with a scene key. Do the same for <b>Game.js</b> or whatever scene your game has.
+Make sure to replace <b>StartGame</b> with your scene name, and replace <b>"startGame"</b> with any scene key to identify the scene. Do the same for <b>Game.js</b> or whatever scene your game has.
 
-# Add components
+<br/>
+# Step 6: Add components
+<div class="blog-title-line">.</div>
+
 Now, you can add components, such as rectangles, images, interaction, sounds, etc to your game.
 <br/>
 
-<b>Example</b>
+**Example**
+<br/>
+Here, we add the text "Hello World!" in the center of our game, and set the anchor point of the text to the middle.
+
 <div class="blog-file-label"> startGame.js</div>
 {% highlight javascript %}
 create() {
-  this.add.rectangle(0, 0, 200, 100, 0xff0000)
+    const textSprite = this.add.text(400, 300, 'Hello World in Phaser 3!', { fontFamily:'Arial', fontSize: "30px", fill: "#00ff00" })
+    textSprite.setOrigin(0.5, 0)
 }
 {% endhighlight %}
 
 
 Here is a <a href="/blog/phaser">cheat sheet</a> for the various components you can add to make your game.
 
+<br/>
+# Step 7: Launch Game
+<div class="blog-title-line">.</div>
 
-
-# Launch Game
 Now, open  your terminal
 <br/>
 
 Activate your game to see if it works.
 
-<div class="blog-file-label">terminal/command line</div>
 {% highlight html %}
-http-server .
+$ http-server .
 {% endhighlight %}
 
 <b>What you should see</b>
@@ -162,6 +173,6 @@ When you open up localhost:8080, or whatever port in your browser, here is what 
 
 <img src="/assets/images/blog/phaserRect.png" width="300px"/> 
 
-# Done
+# Hooray!
 
-Hooray! We've just intialized a generic Phaser Game. We can further build on this by <a href="/blog/phaser">adding components</a> and logic.
+We've just intialized a generic Phaser Scene. We can further build on this by <a href="/blog/phaser">adding components</a> and logic.

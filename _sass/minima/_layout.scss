@@ -12,10 +12,6 @@
   background-color: darken($brand-color, 30%);
 }
 
-.moveable-header {
-  position: relative;
-}
-
 .site-title-logo {
   float: left;
   display: flex;
@@ -224,12 +220,10 @@
 .page-content {
   margin-top: 100px;
   background-color: #efefef;
-
   font-family: "Roboto";
   padding: $spacing-unit 0;
   flex: 1;
   font-size: 22px;
-  // position: relative;
 }
 
 .no-header-margin {
@@ -278,6 +272,7 @@
   border-top: 2px solid #eeeeee;
   color: white;
 }
+
 
 .post-title-line-top {
   border-top: 4px solid #eeeeee;
@@ -370,4 +365,10 @@
 
 .blog-index {
   font-size: 20px;
+}
+
+.blog-title-line {
+  margin-top: -10px;
+  border-top: 2px solid #eeeeee;
+  color: white;
 }

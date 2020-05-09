@@ -5,12 +5,12 @@
     </head>
     {%- include head.html -%}
     <body>
-        <main aria-label="Content" class="page-content no-header-margin">
-            <div class="wrapper body-wrapper" style="z-index: -100;">
+        <main aria-label="Content" class=" no-header-margin">
+            <div class="wrapper blog-wrapper" style="z-index: -100;">
                 {%- include blog-header.html -%}
-                <article class="post">
+                <article class="blog-post">
                     <div class="post-title-line-top" ></div>
-                    <h1 class="black" style="text-transform: uppercase;">{{ page.title | escape }}</h1>
+                    <h1 class="black" style="font-family: Montserrat; font-size:30px">{{ page.title | escape }}</h1>
                     {%if page.date %}
                         <div class="blog-date"> {{ page.date | date: "%B %-d, %Y" }}</div>
                         <br/>

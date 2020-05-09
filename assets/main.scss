@@ -285,8 +285,7 @@
 }
 
 .grid-card{
-  width: 90%;
-  margin: 10px;
+  margin: 10px 0px;
   border-width: thin;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -301,9 +300,9 @@
 }
 
 .blog-file-label {
-  color: darken($grey-color, 10%);
+  color: darken($grey-color, 20%);
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-style: oblique;
 }
 
@@ -318,5 +317,4 @@
 .ib {
   font-style: oblique;
   font-weight: bold;
-
 }

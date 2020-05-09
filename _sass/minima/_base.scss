@@ -124,20 +124,16 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 10%);
   }
 
   &:hover {
     color: $text-color;
-    // text-decoration: underline;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
-    .username {
-      // text-decoration: underline;
-    }
   }
 }
 
@@ -165,11 +161,12 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  color: white;
+  background-color: #1d1f21;
 }
 
 code {
-  padding: 1px 5px;
+  padding: 3px 5px;
 }
 
 pre {
@@ -188,7 +185,6 @@ pre {
  */
 .wrapper {
   z-index: -1000;
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
@@ -209,6 +205,15 @@ pre {
   margin-top: 50px;
   padding: 50px;
 }
+
+.blog-wrapper {
+  background-color: white;
+  margin-top: 50px;
+  padding: 50px;
+
+  max-width: calc(900px - (#{$spacing-unit} * 2));
+}
+
 
 /**
  * Clearfix

@@ -40,7 +40,12 @@ blogLinks:
 # Disqus Comments
 disqus:
   shortname: sciffany-github-io
-highlighter: rouge
+# highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+
 
 # Sitemap
 plugins:
