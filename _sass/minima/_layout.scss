@@ -334,6 +334,16 @@
     text-transform: None;
     letter-spacing: normal;
   }
+  h1, h2 {
+    padding-top: 20px;
+  }
+  hr {
+    margin-top: -10px;
+    border: none;
+    border-top: 1.5px solid #eeeeee;
+    color: white;
+    padding-bottom: 20px;
+  }
 }
 
 .rob {
@@ -365,10 +375,4 @@
 
 .blog-index {
   font-size: 20px;
-}
-
-.blog-title-line {
-  margin-top: -10px;
-  border-top: 2px solid #eeeeee;
-  color: white;
 }

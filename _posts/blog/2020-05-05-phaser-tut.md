@@ -12,9 +12,8 @@ Below is a quick walkthrough on how to initialize a web browser game using Phase
 
 <img src="/assets/images/blog/phaserRect.png" width="400px;" align="center">
 
-<br/>
 # Step 1: Download Node.js
-<div class="blog-title-line">.</div>
+---
 
 We need Node.js to be able to use http-server which serves our resources to the browser.
 
@@ -22,12 +21,10 @@ Download Node.js from the <a href="https://nodejs.org/en/">official website</a> 
 
     $ node --version
 
-
 Node package manager (npm) should come installed with Node.js.
 
-<br/>
 # Step 2: Download http-server
-<div class="blog-title-line">.</div>
+---
 
 After downloading Node.js and npm, download http-server using npm.
 
@@ -53,9 +50,8 @@ If you see this, that means that
 your folder is being correctly served. You can check this by visiting <span class="b">localhost:8080</span> through your fave browser.
 You can abort your server by hitting Ctrl+C in terminal.
 
-<br/>
 # Step 3: Initial HTML file
-<div class="blog-title-line">.</div>
+---
 
 Create a folder. Inside it, create a file called **index.html.**
 
@@ -75,9 +71,8 @@ This is the main page that will be served by your server.
 
 Here, we import `phaser.js` script from online to enable Phaser.js functionalities, and import a file called `main.js` (which we'll edit in a while).
 
-<br/>
 # Step 4: Initialize Phaser in javascript
-<div class="blog-title-line">.</div>
+---
 
 Using <span class="b">main.js</span>, you can initialize a Phaser game with your very own scenes and configurations.
 
@@ -108,9 +103,8 @@ var config = {
 new Phaser.Game(config)
 {% endhighlight %}
 
-<br/>
 # Step 5: Initialize scene
-<div class="blog-title-line">.</div>
+---
 
 In **StartGame.js** and your other scene files, make each scene extend Phaser.Scene, and inherit two functions, `preload()` and `create()`.
 
@@ -132,9 +126,9 @@ export default class StartGame extends Phaser.Scene {
 {% endhighlight %}
 Make sure to replace <b>StartGame</b> with your scene name, and replace <b>"startGame"</b> with any scene key to identify the scene. Do the same for <b>Game.js</b> or whatever scene your game has.
 
-<br/>
+
 # Step 6: Add components
-<div class="blog-title-line">.</div>
+---
 
 Now, you can add components, such as rectangles, images, interaction, sounds, etc to your game.
 <br/>
@@ -154,9 +148,8 @@ create() {
 
 Here is a <a href="/blog/phaser">cheat sheet</a> for the various components you can add to make your game.
 
-<br/>
 # Step 7: Launch Game
-<div class="blog-title-line">.</div>
+---
 
 Now, open  your terminal
 <br/>

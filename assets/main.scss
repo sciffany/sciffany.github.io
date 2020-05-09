@@ -275,12 +275,8 @@
   width: 100%;
 }
 
-.code-block {
-  width: 800px;
-}
-
 .grid-card{
-  margin: 10px 0px;
+  margin: 30px 0px;
   border-width: thin;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -299,17 +295,4 @@
   margin-top: 10px;
   font-size: 15px;
   font-style: oblique;
-}
-
-.i {
-  font-style: oblique;
-}
-
-.b {
-  font-weight: bold;
-}
-
-.ib {
-  font-style: oblique;
-  font-weight: bold;
 }
