@@ -1,41 +1,39 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-    </head>
-    {%- include head.html -%}
-    <body>
-        <main aria-label="Content" class=" no-header-margin">
-            <div class="wrapper blog-wrapper" style="z-index: -100;">
-                {%- include blog-header.html -%}
-                <article class="blog-post">
-                    <div class="post-title-line-top" ></div>
-                    <h1 class="black" style="font-family: Montserrat; font-size:30px">{{ page.title | escape }}</h1>
-                    {%if page.date %}
-                        <div class="blog-date"> {{ page.date | date: "%B %-d, %Y" }}</div>
-                        <br/>
-                    {%else%}
-                        <div class="post-title-line" >.</div>
-                    {%endif%}
-                    
-                    <div class="blog-content rob">
-                        {{ content }}
-                    </div>
-                    <br />
-                    <hr />
-                    {% if page.comments %} 
-                        {%- include disqus.html %}
-                    {% endif %}
+---
+layout: loadScripts
+---
 
-                    {% if page.summary %}
-                    <meta name="description" content="{{ page.summary | escape }}">
-                    {% endif %}
-                    {%if page.tags %}
-                    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
-                    {%endif %}
-                </article>
-            </div>
-        </main>
-        {%- include footer.html -%}
-    </body>
-</html>
+{%- include head.html -%}
+<body>
+    <main aria-label="Content" class=" no-header-margin">
+        <div class="wrapper blog-wrapper" style="z-index: -100;">
+            {%- include blog-header.html -%}
+            <article class="blog-post">
+                <div class="post-title-line-top" ></div>
+                <h1 class="black" style="font-family: Montserrat; font-size:30px">{{ page.title | escape }}</h1>
+                {%if page.date %}
+                    <div class="blog-date"> {{ page.date | date: "%B %-d, %Y" }}</div>
+                    <br/>
+                {%else%}
+                    <div class="post-title-line" >.</div>
+                {%endif%}
+                
+                <div class="blog-content rob">
+                    {{ content }}
+                </div>
+                <br />
+                <hr />
+                {% if page.comments %} 
+                    {%- include disqus.html %}
+                {% endif %}
+
+                {% if page.summary %}
+                <meta name="description" content="{{ page.summary | escape }}">
+                {% endif %}
+                {%if page.tags %}
+                <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+                {%endif %}
+            </article>
+        </div>
+    </main>
+    {%- include footer.html -%}
+</body>

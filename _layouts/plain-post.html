@@ -1,26 +1,19 @@
 ---
-layout: plain-post
+layout: loadScripts
 ---
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    {%- include head.html -%}
+{%- include head.html -%}
+<body>
+    {%- include header.html -%}
+    <main aria-label="Content" class="page-content">
+        <div class="wrapper body-wrapper">
+            {{ content }}
 
-    <body>
+        </div>
+    </main>
 
-        {%- include header.html -%}
-
-
-        <main aria-label="Content" class="page-content">
-            <div class="wrapper body-wrapper" style="z-index: -100;">
-
-                {{ content }}
-
-            </div>
-        </main>
-
-        {%- include footer.html -%}
-
-    </body>
-
-</html>
+    {%- include footer.html -%}
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+</body>
