@@ -22,7 +22,7 @@ layout: loadScripts
                 </div>
                 <br />
                 <hr />
-                {% if page.comments %} 
+                {% if page.comments != false and jekyll.environment == "production"%} 
                     {% include disqus.html %}
                 {% endif %}
 
