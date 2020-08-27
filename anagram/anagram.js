@@ -222,20 +222,20 @@ function tryGuess(index, character) {
     redraw()
     if (guess.length == nLetters && guess.join("") === word.toUpperCase()) {
       //check for win
-      $.ajax({
-        type: "POST",
-        url: "http://sciffanycanvas.herokuapp.com/anagram",
-        data: { text: word },
-        success: function(data) {
-          alert("done")
-        }
-      })
-      $.ajax({
-        url: "http://sciffanycanvas.herokuapp.com/log.txt",
-        success: function(result) {
-          $("#div1").html(result)
-        }
-      })
+      // $.ajax({
+      //   type: "POST",
+      //   url: "http://sciffanycanvas.herokuapp.com/anagram",
+      //   data: { text: word },
+      //   success: function(data) {
+      //     alert("done")
+      //   }
+      // })
+      // $.ajax({
+      //   url: "http://sciffanycanvas.herokuapp.com/log.txt",
+      //   success: function(result) {
+      //     $("#div1").html(result)
+      //   }
+      // })
 
       guessed[level] = 1
       redraw()
