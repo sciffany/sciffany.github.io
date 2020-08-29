@@ -19,43 +19,34 @@ passion for software development and computer graphics.
 <div class="clearfix">
     <img src="/assets/images/invent.png" style="float: left; padding-right: 20px;"/>
     
-    I have always loved solving math problems and puzzles, as well as building 
-    and creating things, so I naturally
-    loved coding.
-    Coding is an opportunity for me to contribute 
-    to the society while doing what I love most.
+    I have always loved solving math problems and puzzles, as well as building and creating things, so I naturally loved coding.
+    Coding is an opportunity for me to contribute to the society while doing what I love most.
 
     Check out my
     <a href="/experience/"><b>work experience</b></a> and <a href="/projects/"><b>software projects</b></a>.
 
-
-    <br/>
-    <br/>
+    <br/><br/>
 
     <h5>
         Game development
     </h5>
+
     Inspired by the book
     <a href="https://inventwithpython.com/invent4thed/">
     Invent Your Own Computer Games in Python by Al Sweigart</a>,
-    I began coding in 2013
-
-    and have since then developed several  <a href="/games/">
-        <b>games</b></a>.
+    I began coding in 2013 and have since then developed several 
+    <a href="/games/"><b>games</b></a>.
 
 </div>
 
 <br/>
+
 <h2>
     <b>Graphic Design</b>
 </h2>
 
-Vibrant
-colors and bouncy animations of cartoons have always inspired me, and I strive to
-emulate this in the
-<a href="design">
-<b>graphics</b>
-</a>
+Vibrant colors and bouncy animations of cartoons have always inspired me,
+and I strive to emulate this in the <a href="design"><b>graphics</b></a>
 I design. I have worked on many projects and several
 clients including volunteer welfare organisations.
 
@@ -63,7 +54,6 @@ clients including volunteer welfare organisations.
 
 <h2>
     <b>Contact Me</b>
-
 </h2>
 
 I am always up to work on projects that will impact

@@ -2,12 +2,12 @@
 layout: plain-post
 permalink: /data/
 categories: [work]
-ref: data
+ref: staffany-data
 role: Data Engineering Consultant
 dur: May 2019 - October 2019
 title: Staffany Pte Ltd
 clar: Data
-link: http://staffany.com/
+link: https://staffany.com/
 ---
 
 Architected and built <b>GCP BigQuery warehouse</b> and data marts to consolidate, store and manage millions of rows of company data, enabling company data analysts (myself included) to query data to create SQL dashboards used by all company departments daily

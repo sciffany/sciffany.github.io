@@ -2,7 +2,7 @@
 layout: plain-post
 permalink: /researcher/
 categories: [work]
-ref: researcher
+ref: transcelestial
 role: Computer Vision Intern
 dur: May 2018 - August 2018
 title: Transcelestial Technologies
