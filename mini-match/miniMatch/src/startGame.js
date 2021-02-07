@@ -32,17 +32,13 @@ export default class StartGame extends Phaser.Scene {
   }
 
   async contactServer() {
-    const myObj = await handleStartGame(this)
-    if (myObj.done !== "1") {
-      return
-    }
+    // const myObj = await handleStartGame(this)
+    // if (myObj.done !== "1") {
+    //   return
+    // }
 
     var d = new Date()
     var n = d.getTime()
-    this.scene.start("game", {
-      authCode: myObj.authcode,
-      challengeMode: myObj.challenge,
-      startTime: n,
-    })
+    this.scene.start("game")
   }
 }
