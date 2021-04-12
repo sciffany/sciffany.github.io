@@ -5,10 +5,9 @@ categories: [project]
 image: steganography
 ref: gsteganography
 lang: MATLAB
-pdf: stenography
 ---
 
-Developed application which conceals text messages in music clips for reliable data transmission through air via inaudible high-frequency sound waves
+Helped developed application which conceals text messages in music clips for reliable data transmission through air via inaudible high-frequency sound waves
 
 **Methodology**
 

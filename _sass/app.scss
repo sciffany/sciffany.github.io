@@ -82,9 +82,7 @@
 }
 
 .link-wrapper {
-  width: 300px;
   display: flex;
-  justify-content: space-evenly;
 }
 
 .project-icon {
@@ -256,11 +254,11 @@
   width: 100%;
 }
 
-.grid-card{
+.grid-card {
   margin: 30px 0px;
   border-width: thin;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 25px;
   overflow: scroll;
 }
