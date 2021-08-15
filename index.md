@@ -6,8 +6,8 @@ layout: page
 title: Hello there
 ---
 
-I'm Tiffany Sia Chong, a Year 3 Computer Science student
-in National University of Singapore with a
+I'm Tiffany Sia Chong, a final year Computer Science undergraduate
+at National University of Singapore with a
 passion for software development and computer graphics.
 
 <br/>
