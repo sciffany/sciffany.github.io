@@ -7,10 +7,11 @@ description: 2D tile-based map designer for Foof Game below
 algo:
 challenge:
 graphics: Adobe Photoshop, MS Paint
-gh: /flash/swfs/mapDesigner.swf
+# gh: /flash/swfs/mapDesigner.swf
 lang: AS3
 ---
 
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 <div align="center" style="margin-bottom: 20px;">
 
 Note: It is not currently possible to test your map due to the nature of the flash game.

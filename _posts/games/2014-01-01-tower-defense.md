@@ -8,10 +8,11 @@ challenge: Mathematical calculations (pythagorean theorem) to determine if new e
 graphics: Adobe Flash, MS Paint
 algo:
 creds: as3gametuts
-gh: /flash/swfs/gift.swf
+# <!-- gh: /flash/swfs/gift.swf -->
 lang: AS3
 ---
 
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 <div align="center">
   <embed height="600px" src="/flash/swfs/gift.swf" width="800px" />
   <br />
