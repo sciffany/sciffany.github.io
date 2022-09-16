@@ -12,14 +12,14 @@
           </div>
         </a>
 
-        {% else if ""{{post.link}}""%}
-        <a href="{{ post.link }}">
+        {% elsif post.tg %}
+        <a href="{{ post.tg }}">
           <div class="play-word">
             <b>PLAY GAME</b>
           </div>
         </a>
 
-        {% else if %}
+        {% else %}
         <a href=" {{ site.baseurl }} {{ post.url }}">
           <div class="play-word">
             <b>PLAY GAME</b>
